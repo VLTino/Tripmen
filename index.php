@@ -47,7 +47,7 @@ $agen = query("SELECT * FROM `agen`");
 <style>
     /* CSS untuk tampilan popup */
     .popup {
-        display: none;
+        
         position: fixed;
         bottom: -100%;
         right: -8%;
@@ -95,7 +95,7 @@ $agen = query("SELECT * FROM `agen`");
     <a><i class="fa-brands fa-whatsapp" id="popup-button"></i></a>
 </div>
 
-<div class="popup">
+<div class="popup" style="display: none;">
     <!-- Konten popup -->
     <?php foreach ($popup as $pp): ?>
     <div class="hw">

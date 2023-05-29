@@ -1,0 +1,689 @@
+
+
+.header {
+    overflow: hidden;
+    height: 1000px;
+    margin-top: 100px;
+    position: relative;
+}
+
+
+.bkimg{
+   position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.content-header {
+    
+    position: absolute;
+    padding-top: 9.5%;
+    margin: 0px 150px 150px 150px;
+    top: -100px;
+}
+
+
+
+
+#hdr {
+    margin-top: 50px;
+}
+
+#logo {
+    width: 150px;
+}
+
+
+#jdl {
+    font-size: 80px;
+}
+
+
+#phdr {
+    font-size: 28px;
+}
+
+#wahdr {
+    color: white;
+    text-decoration: none;
+    border: solid 1px rgb(25,80,224);
+    border-radius: 10px;
+    background-color: rgb(25,80,224);
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#wahdr:hover {
+    color: rgb(25,80,224);
+    background-color: white;
+}
+
+.content {
+    overflow: hidden;
+    background-color: whitesmoke;
+    position: absolute;
+    top: 90%;
+    
+}
+
+.akomo{
+    
+    padding: 50px;
+    
+}
+
+.akomo h2 {
+    font-size: 50px;
+    width: auto;
+    text-align: center;
+}
+
+
+
+.akoimg {
+    position: relative;
+    left: 43%;
+    width: 50px;
+}
+
+.akoimg img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+
+.akomop {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+.about {
+    position: relative;
+    padding: 50px;
+    padding-bottom: 0;
+    
+    
+    
+}
+
+.about img {
+    position: absolute;
+    width: 50px;
+    left: 47.5%;
+    top: 7%;
+}
+
+.cabout {
+    text-align: center;
+    padding: 30px 15px 30px 15px;
+    border-radius: 10px;
+    background-color: rgb(188,225,56);
+}
+
+.cabout h2 {
+    font-size: 50px;
+}
+
+.cabout p{
+    font-size: 18px;
+}
+
+.promo {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+.diskon {
+    word-break: break-word;
+    text-align: center;
+    border-radius: 10px;
+   margin-top: 10px;
+    height: auto;
+    padding: 20px;
+    background-color: rgb(25,80,224);
+    color: white;
+}
+
+.diskon h4 {
+    font-weight: bold;
+    padding: 10px;
+    position: relative;
+    top: 30%;
+    display: inline-block;
+    bottom: 50%;
+    font-size: 24px;
+}
+
+.harga {
+    text-align: center;
+    padding-bottom:50px ;
+}
+
+.harga h2 {
+    font-size: 32px;
+    margin-top: 50px;
+}
+
+.harga h1 {
+    font-size: 48px;
+}
+
+.merk {
+    color: blue;
+    margin: 0;
+    padding: 0;
+}
+
+.jenis {
+    margin: 0;
+    padding: 0;
+}
+
+.nominal {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+.wa {
+    color: white;
+    text-decoration: none;
+    border: solid 1px rgb(25,80,224);
+    border-radius: 10px;
+    background-color: rgb(25,80,224);
+    
+}
+
+.wa:hover {
+    color: rgb(25,80,224);
+    background-color: white;
+}
+
+    
+
+.mobil {
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+.motor {
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+}
+
+.benefit {
+    padding-top: 50px;
+}
+
+.benefit h2 {
+    font-size: 55px;
+    padding-bottom: 30px;
+}
+
+.content-benefit {
+    padding: 30px;
+    background-color: white;
+}
+
+.content-benefit:hover {
+    transition-property: box-shadow;
+    transition-duration: 0.5s;
+    transform: scale(1.0);
+    box-shadow: 0 0 15px gray;   
+
+}
+
+.content-benefit h4,.content-benefit p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.p1 {
+    color: blue;
+}
+
+.content-benefit h4 {
+    font-size: 24px;
+    margin-top: 15px;
+}
+
+.content-benefit p {
+    font-size: 16px;
+}
+
+.testi {
+    padding-top: 50px;
+}
+
+.content-testi {
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.content-testi-h {
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.htes {
+    font-size: 48px;
+}
+
+.content-testi img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.content-testi-p {
+    text-align: center;
+    font-size: 16px;
+}
+
+.nama-testi,.tempat-testi {
+    margin: 0;
+    
+}
+
+
+.orang {
+    padding-top: 15px;
+}
+
+.note p {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 30px;
+    
+}
+
+.fasi {
+    position: relative;
+    height: 100%;
+    background-color: white;
+}
+.fas-img {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 0%;
+}
+
+
+.fasilitas {
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.fas-hd {
+    padding-top: 100px;
+    
+}
+
+.fas-hd h4 {
+    font-size: 32px;
+}
+
+.fas-p {
+    padding-top: 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+    
+}
+
+.fas-p ul {
+    padding: 0;
+}
+
+.fas-p li{
+    padding-bottom: 10px;
+}
+.check {
+    color: rgb(25,80,224);
+    padding-right: 10px;
+    
+}
+
+.sistem {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    background-color: white;
+    width: 100%;
+    z-index: 2;
+}
+
+.sistem-p ul {
+    padding: 0;
+}
+
+.sistem-p ul li {
+    padding-bottom: 10px;
+}
+.sistem-p {
+    padding-top: 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+.info {
+    color:rgb(25,80,224) ;
+    padding-right: 10px;
+}
+
+footer {
+    position: relative;
+    background-color: white;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.foot {
+    position: relative;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    z-index: 1;
+}
+
+.foot h1 {
+    font-size: 32px;
+}
+
+#wafoot {
+    word-break: break-all;
+    text-decoration: none;
+    color: white;
+    border: solid 1px rgb(25,80,224) ;
+    text-align: center;
+    background-color:rgb(25,80,224) ;
+    border-radius: 10px;
+    padding: 15px 20px 15px 20px;
+}
+
+@media screen and (max-width:400px) {
+   #wafoot {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+}
+
+#wafoot:hover {
+    color:rgb(25,80,224) ;
+    background-color: white;
+}
+
+
+.circle-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.foot-img {
+    position: absolute;
+    z-index: 2;
+    left: 47%;
+    top: 7%;
+}
+
+.whatsapp {
+    position: fixed;
+    padding: 20px;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+.whatsapp a {
+    text-decoration: none;
+}
+
+.whatsapp a i {
+    text-align: center;
+    padding-top: 7px;
+    font-size: 25px;
+    color: white;
+    border-radius: 50%;
+    background-color: rgb(44,183,67);
+    width: 40px;
+    height: 40px;
+    
+}
+
+.wan {
+    background-color: aliceblue;
+    color: black;
+    padding: 10px;
+}
+
+#powa {
+    text-decoration: none;
+}
+
+.hw {
+    background-color: rgb(44,183,67) ;
+    color: white;
+    padding: 10px;
+}
+
+.hw p{
+    font-size: 10px;    
+}
+
+#powa p {
+    font-size: 10px;
+    color: black;
+    margin: 15px;
+}
+
+.agen a {
+    text-decoration: none;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+    .content-header {
+        margin: 50px;
+    }
+    
+}
+
+
+@media screen and (max-width:1200px) {
+    .fas-img {
+        opacity: 0;
+    }
+    
+}
+
+
+@media screen and (min-width:1000px) {
+    .akomo {
+        width: 90%;
+        position: relative;
+        right: -5%;
+    }
+    
+    .about {
+        width: 90%;
+        position: relative;
+        right: -5%;
+    }
+
+    .foot-img {
+        left:48.4%;
+    }
+    
+}
+
+
+@media screen and (max-width:700px) {
+    .foot-img {
+        left:46.5%;
+    }
+    
+}
+
+@media screen and (max-width:900px) {
+    .htes {
+        font-size: 32px;
+    }
+
+    .fas-hd h4 {
+        font-size: 20px;
+    }
+
+    .note p {
+        font-size: 14px;
+        font-weight: normal;
+    }
+    
+} 
+
+
+@media screen and (max-width: 800px) {
+    #logo {
+        width: 100px;
+        
+    }
+
+    #jdl {
+        font-size: 45px;
+        
+    }
+
+    .akomop{
+        text-align: left;
+    }
+
+    .akomo h2 {
+        font-size: 32px ;
+        text-align: center;
+    }
+    
+    .cabout h2 {
+        font-size: 40px;
+    }
+
+    .about img{
+        top: 7%;
+        left: 46%;
+    }
+
+    .fas-p {
+        font-size: 14px;
+    }
+    
+    .sistem-p {
+        font-size: 14px;
+    }
+    
+    #bh2 {
+        font-size: 32px;
+    }
+
+    .harga h1 {
+        font-size: 32px;
+    }
+
+    .harga h2 {
+        font-size: 20px;
+    }
+}
+
+
+@media screen and (max-width:600px) {
+    .diskon h4 {
+        font-size: 18px;
+    }
+    
+    .content-benefit p {
+        font-size: 14px;
+    }
+
+    .htes {
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .content-header {
+        margin: 20px;
+    }
+
+    
+    .akomo {
+        padding:30px;
+    }
+    
+    .about {
+        padding: 30px;
+    }
+    
+    .about img{
+        top: 3%;
+        left: 42%;
+    }
+
+    .cabout h2 {
+        font-size: 30px;
+        
+    }
+    
+    .cabout p{
+        font-size: 14px;
+    }
+    
+    .foot-img {
+        left:44.5%;
+    }
+
+    #bh2 {
+        font-size: 25px;
+    }
+
+    .akomo h2 {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .akomop {
+        font-weight: normal;
+    }
+
+    .harga h1 {
+        font-size: 25px;
+    }
+    
+}
+
+
+@media screen and (max-width: 400px) {
+    .foot-img {
+        left: 43%;
+    }
+    
+}

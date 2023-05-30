@@ -157,17 +157,19 @@ $agen = query("SELECT * FROM `agen`");
 </script>
 
 
+<div class="back">
+    <div class="bg">
+          <?php foreach ($header as $hdr): ?>
+              <img src="img/<?php echo $hdr["bg"] ?>" alt="" srcset="" class="img-fluid bkimg">
+          <?php endforeach; ?>
+      </div>
 
+</div>
     <div class="header">
-        <div class="row">
-            <div class="col-lg-3"><img src="img/transparan.png" alt="" srcset="" class="img-fluid bkimg"></div>
-            <div class="col-lg-3"><img src="img/transparan.png" alt="" srcset="" class="img-fluid bkimg"></div>
-            <div class="col-lg-6">
-                <?php foreach ($header as $hdr): ?>
-                    <img src="img/<?php echo $hdr["bg"] ?>" alt="" srcset="" class="img-fluid bkimg">
-                <?php endforeach; ?>
-            </div>
-        </div>
+       
+           
+            
+        
         <div class="content-header">
             <div class="row">
                 <div class="col-lg-6" id="hdr">

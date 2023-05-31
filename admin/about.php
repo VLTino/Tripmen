@@ -44,10 +44,11 @@ if (isset($_POST["sbmc2"])) {
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/flatly/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="fontawesome/fontawesome-browser.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vanilla-icon-picker-main/www/icon-picker.css">
+    <!-- Icon picker themes -->
+    <link rel="stylesheet" href="vanilla-icon-picker-main/dist/themes/default.min.css">
+    <link rel="stylesheet" href="vanilla-icon-picker-main/dist/themes/bootstrap-5.min.css">
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -232,125 +233,93 @@ if (isset($_POST["sbmc2"])) {
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <?php foreach ($about as $abt): ?>
-                                <div class="container my-5">
-
-                                    <script type="text/javascript"
-                                        src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
-                                        </script>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">    
+                                        <div class="form-group">
+                                            <label for="icon-picker" class="form-label">Choose icon</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="basic-addon1"></span>
+                                                <input type="text" id="icon-picker" class="form-control" value="<?= $abt["icon"]; ?>" name="icon">
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p class="lead">Ganti Icon</p>
-                                <input type="text" name="icon" value="<?= $abt["icon"]; ?>" class="form-control" placeholder="Select icon" data-fa-browser />
-                            </div>
-                            <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
-                            <script src="fontawesome/fontawesome-browser.js"></script>
-                            <script>
-                                $(function ($) {
-                                    $.fabrowser();
-                                });
-                            </script>
-                            <script type="text/javascript">
+                                Header
+                                <input type="text" name="header" id="" class="form-control" value="<?= $abt["header"]; ?>">
+                                Teks
+                                <textarea name="teks" id="" cols="30" rows="10"
+                                    class="form-control"><?= $abt["teks"]; ?></textarea>
 
-                                var _gaq = _gaq || [];
-                                _gaq.push(['_setAccount', 'UA-36251023-1']);
-                                _gaq.push(['_setDomainName', 'jqueryscript.net']);
-                                _gaq.push(['_trackPageview']);
+                            <?php endforeach; ?>
+                            <button type="submit" name="sbmc2" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
 
-                                (function () {
-                                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-                                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-                                })();
 
-                            </script>
-                            <script>
-                                try {
-                                    fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response) {
-                                        return true;
-                                    }).catch(function (e) {
-                                        var carbonScript = document.createElement("script");
-                                        carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
-                                        carbonScript.id = "_carbonads_js";
-                                        document.getElementById("carbon-block").appendChild(carbonScript);
-                                    });
-                                } catch (error) {
-                                    console.log(error);
-                                }
-                            </script>
-                            Header
-                            <input type="text" name="header" id="" class="form-control" value="<?= $abt["header"]; ?>">
-                            Teks
-                            <textarea name="teks" id="" cols="30" rows="10"
-                                class="form-control"><?= $abt["teks"]; ?></textarea>
 
-                        <?php endforeach; ?>
-                        <button type="submit" name="sbmc2" class="btn btn-primary">Submit</button>
+
                 </div>
-                </form>
+                <!-- End of Main Content -->
 
-
-
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white col-12">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Your Website 2021</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
+            <!-- End of Content Wrapper -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white col-12">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="logout.php">Logout</a>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="logout.php">Logout</a>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
 
-    <!-- Page level plugins -->
-    <script src="vendor/chart.js/Chart.min.js"></script>
+        <!-- Page level plugins -->
+        <script src="vendor/chart.js/Chart.min.js"></script>
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/chart-area-demo.js"></script>
-    <script src="js/demo/chart-pie-demo.js"></script>
-
+        <!-- Page level custom scripts -->
+        <script src="js/demo/chart-area-demo.js"></script>
+        <script src="js/demo/chart-pie-demo.js"></script>
+        <script src="vanilla-icon-picker-main/dist/icon-picker.min.js"></script>
+        <script src="vanilla-icon-picker-main/www/index.js"></script>
 </body>
 
 </html>

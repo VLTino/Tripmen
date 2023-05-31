@@ -208,7 +208,7 @@ $agen = query("SELECT * FROM `agen`");
                 <?php foreach ($content1 as $c1): ?>
                     <div class="col-md-3">
                         <div class="akoicon">
-                            <p><i class="fa fa-smile-o"></i></p>
+                            <p><i class="<?= $c1["icon"]; ?>"></i></p>
                         </div>
                         <br>
                         <p class="akomop">
@@ -220,9 +220,7 @@ $agen = query("SELECT * FROM `agen`");
 
             </div>
         </div>
-<div class="container">
 
-    </div>
     <div class="about">
         <?php foreach ($about as $abt): ?>
            <div class="iconabt">

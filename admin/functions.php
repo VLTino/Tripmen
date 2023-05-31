@@ -179,18 +179,13 @@ function inpc1($data)
 
     global $conn;
     error_reporting(0);
-    $gambar = $data["gambar"];
+    $icon = $data["icon"];
     $teks = htmlspecialchars($data["teks"]);
 
-    $gambar = img();
-    if (!$gambar) {
-        return false;
-    }
-
-    $query = "INSERT INTO `content1` VALUES (NULL,'$gambar','$teks')";
+    $query = "INSERT INTO `content1` VALUES (NULL,'$icon','$teks')";
     mysqli_query($conn, $query);
-    mysqli_affected_rows($conn);
-    return true;
+    return mysqli_affected_rows($conn);
+    
 
 }
 
@@ -214,29 +209,11 @@ function editc1($data)
     global $conn;
     error_reporting(0);
     $id = $data["id"];
-    $gambar = $data["gambar"];
+    $icon = $data["icon"];
     $teks = htmlspecialchars($data["teks"]);
 
-    $result = mysqli_query($conn, "SELECT `gambar` FROM `content1` WHERE `id`=$id ");
-    $row = mysqli_fetch_assoc($result);
-    $gambarlama = $row['gambar'];
-
-
-    $gambar = imgedit();
-    if (!$gambar) {
-        $gambar = $gambarlama;
-    }
-
-    $query = "UPDATE `content1` SET `gambar`='$gambar',`teks`='$teks' WHERE `id`=$id";
+    $query = "UPDATE `content1` SET `icon`='$icon',`teks`='$teks' WHERE `id`=$id";
     mysqli_query($conn, $query);
-
-    if ($gambarlama && $gambarlama != $gambar) {
-        $old_file = "../img/$gambarlama";
-        if (file_exists($old_file)) {
-            unlink($old_file);
-        }
-    }
-
     return mysqli_affected_rows($conn);
 
 
@@ -246,16 +223,6 @@ function editc1($data)
 function deletec1($id)
 {
     global $conn;
-
-    $result = mysqli_query($conn, "SELECT `gambar` FROM `content1` WHERE `id`=$id ");
-    $row = mysqli_fetch_assoc($result);
-    $gambarlama = $row['gambar'];
-
-    $old_file = "../img/$gambarlama";
-    if (file_exists($old_file)) {
-        unlink($old_file);
-    }
-
     $query = "DELETE FROM `content1` WHERE `id`=$id";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);

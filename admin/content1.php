@@ -239,7 +239,7 @@ if (isset($_POST["sbmhd"])){
                         <thead>
                             <tr>
                                 <th scope="col">No</th>
-                                <th scope="col">Gambar</th>
+                                <th scope="col">Icon</th>
                                 <th scope="col">Teks</th>
                                 <th scope="col">Action</th>
                             </tr>
@@ -249,7 +249,7 @@ if (isset($_POST["sbmhd"])){
                             <?php foreach ($problem as $pr): ?>
                                 <tr>
                                     <th scope="row"><?= $i++; ?></th>
-                                    <td><img src="../img/<?php echo $pr["gambar"]; ?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%;">
+                                    <td><i class="<?php echo $pr["icon"]; ?>"></i> 
                                     </td>
                                     <td>
                                         <?php echo $pr["teks"]; ?>

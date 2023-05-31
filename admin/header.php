@@ -266,7 +266,7 @@ if (isset($_POST["submithdr"])) {
 
                             Backgronud Image <br>
                             <?php foreach ($hdr as $hd) :?>
-                            <img src="../img/<?php echo $hd["bg"];?>" alt="" srcset="" style="width:200px;">
+                            <img src="../img/<?php echo $hd["bg"];?>" alt="" srcset="" style="width:50%;border:solid black;">
 
                             <img src="" alt="" srcset="">
                             <input type="file" class="form-control-file" name="gambar">

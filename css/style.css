@@ -168,11 +168,11 @@
 }
 
 .iconabt p{
-    font-size: 30px;
+    font-size: 24px;
    position: absolute;
     text-align: center;
     color: white;
-    top: 10%;
+    top: 25px;
     
 }
 
@@ -181,7 +181,7 @@
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    padding: 15px;
+    padding: 18px;
 }
 
 .cabout {
@@ -189,6 +189,14 @@
     padding: 30px 15px 30px 15px;
     border-radius: 10px;
     background-color: rgb(188,225,56);
+}
+
+@media screen and (max-width:500px) {
+    .cabout{
+        margin-top: 20px;
+        padding: 50px 15px 50px 15px;
+    }
+    
 }
 
 .cabout h2 {

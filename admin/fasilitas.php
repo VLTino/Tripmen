@@ -269,7 +269,7 @@ if (isset($_POST["fas"])){
 
                     <p>Background Fasilitas</p>
                     <?php foreach ($bgfas as $bgf): ?>
-                    <img src="../img/<?= $bgf["gambar"]; ?>" alt="" srcset="" style="width:300px;height:300px;">
+                    <img src="../img/<?= $bgf["gambar"]; ?>" alt="" srcset="" style="width:900px;">
                     <?php endforeach; ?>
                     <form action="" method="post" enctype="multipart/form-data">
                         <input type="file" name="gambar" id=""><br>

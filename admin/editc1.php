@@ -230,9 +230,9 @@ if (isset($_POST["sbmc1"])){
                         <?php foreach ($result as $rs):?>
                         <input type="hidden" name="id" id="" value="<?= $rs["id"]; ?>">
                         <div class="form-group">
-                            Image <br>
-                            <img src="../img/<?= $rs["gambar"] ;?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%;">
-                            <input type="file" name="gambar" id="" class="form-control-file"><br>
+                            Icon <br>
+                            <i class="<?= $rs["icon"] ;?>"></i> 
+                            <input type="file" name="icon" id="" class="form-control-file"><br>
                             Teks
                             <input type="text" name="teks" id="" class="form-control" value="<?php echo $rs["teks"] ?>"><br>
                             <?php endforeach; ?>

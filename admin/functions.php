@@ -267,29 +267,12 @@ function editc2($data)
 
     global $conn;
     error_reporting(0);
-    $gambar = $data["gambar"];
+    $icon = $data["icon"];
     $header = htmlspecialchars($data["header"]);
     $teks = htmlspecialchars($data["teks"]);
 
-    $result = mysqli_query($conn, "SELECT `gambar` FROM `about` WHERE `id`=1");
-    $row = mysqli_fetch_assoc($result);
-    $gambarlama = $row['gambar'];
-
-    $gambar = imgedit();
-    if (!$gambar) {
-        $gambar = $gambarlama;
-    }
-
-    $query = "UPDATE `about` SET `gambar`='$gambar',`header`='$header',`teks`='$teks' WHERE `id`=1";
+    $query = "UPDATE `about` SET `icon`='$icon',`header`='$header',`teks`='$teks' WHERE `id`=1";
     mysqli_query($conn, $query);
-
-    if ($gambarlama && $gambarlama != $gambar) {
-        $old_file = "../img/$gambarlama";
-        if (file_exists($old_file)) {
-            unlink($old_file);
-        }
-    }
-
     return mysqli_affected_rows($conn);
 
 

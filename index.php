@@ -207,8 +207,8 @@ $agen = query("SELECT * FROM `agen`");
             <div class="row">
                 <?php foreach ($content1 as $c1): ?>
                     <div class="col-md-3">
-                        <div class="akoimg">
-                            <img src="img/<?= $c1["gambar"]; ?>" alt="" srcset="" class="img-fluid">
+                        <div class="akoicon">
+                            <p><i class="fa fa-smile-o"></i></p>
                         </div>
                         <br>
                         <p class="akomop">
@@ -220,20 +220,24 @@ $agen = query("SELECT * FROM `agen`");
 
             </div>
         </div>
+<div class="container">
 
-        <div class="about">
-            <?php foreach ($about as $abt): ?>
-                <img src="img/<?= $abt["gambar"]; ?>" alt="" srcset="" class="circle-img">
-                <div class="cabout">
-                    <h2>
-                        <?= $abt["header"]; ?>
-                    </h2>
-                    <p>
-                        <?= $abt["teks"]; ?>
-                    </p>
-                </div>
-            <?php endforeach; ?>
-        </div>
+    </div>
+    <div class="about">
+        <?php foreach ($about as $abt): ?>
+           <div class="iconabt">
+           <p><i class="<?= $abt["icon"]; ?>"></i></p>
+           </div>
+            <div class="cabout">
+                <h2>
+                    <?= $abt["header"]; ?>
+                </h2>
+                <p>
+                    <?= $abt["teks"]; ?>
+                </p>
+            </div>
+        <?php endforeach; ?>
+    </div>
         <div class="container">
             <div class="promo">
                 <div class="row">

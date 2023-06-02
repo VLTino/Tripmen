@@ -270,7 +270,7 @@ if (isset($_POST["sbmhd"])){
                     </table>
                     <a href="inputcontent1.php" class="btn btn-primary">Tambah</a>
 
-<p>assadasd <i class=""></i></p>
+
 
 
                 </div>

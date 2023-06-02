@@ -718,30 +718,13 @@ function editfoot($data)
 {
     global $conn;
     error_reporting(0);
-    $gambar = $data["gambar"];
+    $icon = $data["icon"];
     $header = htmlspecialchars($data["header"]);
     $teks1 = htmlspecialchars($data["teks1"]);
     $teks2 = htmlspecialchars($data["teks2"]);
 
-    $result = mysqli_query($conn, "SELECT `gambar` FROM `footer` WHERE `id`=1");
-    $row = mysqli_fetch_assoc($result);
-    $gambarlama = $row['gambar'];
-
-    $gambar = imgedit();
-    if(!$gambar){
-        $gambar = $gambarlama;
-    }
-
-    $query = "UPDATE `footer` SET `gambar`='$gambar',`header`='$header',`teks1`='$teks1',`teks2`='$teks2' WHERE `id`=1";
+    $query = "UPDATE `footer` SET `icon`='$icon',`header`='$header',`teks1`='$teks1',`teks2`='$teks2' WHERE `id`=1";
     mysqli_query($conn, $query);
-
-    if ($gambarlama && $gambarlama != $gambar) {
-        $old_file = "../img/$gambarlama";
-        if (file_exists($old_file)) {
-            unlink($old_file);
-        }
-    }
-
     return mysqli_affected_rows($conn);
 }
 

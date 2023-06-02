@@ -44,7 +44,11 @@ if (isset($_POST["sbmf"])) {
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vanilla-icon-picker-main/www/icon-picker.css">
+    <!-- Icon picker themes -->
+    <link rel="stylesheet" href="vanilla-icon-picker-main/dist/themes/default.min.css">
+    <link rel="stylesheet" href="vanilla-icon-picker-main/dist/themes/bootstrap-5.min.css">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -235,9 +239,17 @@ if (isset($_POST["sbmf"])) {
                     <form action="" method="post" enctype="multipart/form-data">
                         <div class="form-group">
                             <?php foreach ($footer as $fo):?>
-                            <p>Gambar</p>
-                            <img src="../img/<?= $fo["gambar"]; ?>" alt="" srcset="" style="width:200px;height:200px;border-radius:50%;">
-                            <input type="file" name="gambar" id="" class="form-control-file">
+                                <div class="row">
+                                    <div class="col-12 col-md-6">    
+                                        <div class="form-group">
+                                            <label for="icon-picker" class="form-label">Choose icon</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text" id="basic-addon1"></span>
+                                                <input type="text" id="icon-picker" class="form-control" value="<?= $fo["icon"]; ?>" name="icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             <p>Header</p>
                             <input type="text" name="header" id="" class="form-control" value="<?= $fo["header"]; ?>"><br>
                             <p>Teks1</p>
@@ -311,6 +323,10 @@ if (isset($_POST["sbmf"])) {
         <!-- Page level custom scripts -->
         <script src="js/demo/chart-area-demo.js"></script>
         <script src="js/demo/chart-pie-demo.js"></script>
+
+        <script src="vanilla-icon-picker-main/dist/icon-picker.min.js"></script>
+        <script src="vanilla-icon-picker-main/www/index.js"></script>
+
 
 </body>
 

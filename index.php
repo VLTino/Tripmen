@@ -38,12 +38,50 @@ $agen = query("SELECT * FROM `agen`");
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Tripmen</title>
 </head>
 
 <body>
+    
+<button
+        type="button"
+        class="btn btn-primary btn-floating btn-md"
+        id="btn-back-to-top"
+        >
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    <script>
+        //Get the button
+let mybutton = document.getElementById("btn-back-to-top");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 20
+  ) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+mybutton.addEventListener("click", backToTop);
+
+function backToTop() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+    
+    </script>
+
 <style>
     /* CSS untuk tampilan popup */
     .popup {
@@ -221,6 +259,8 @@ $agen = query("SELECT * FROM `agen`");
             </div>
         </div>
 
+<div data-aos="fade-up">
+
     <div class="about">
         <?php foreach ($about as $abt): ?>
            <div class="iconabt">
@@ -236,6 +276,7 @@ $agen = query("SELECT * FROM `agen`");
             </div>
         <?php endforeach; ?>
     </div>
+</div>
         <div class="container">
             <div class="promo">
                 <div class="row">
@@ -264,59 +305,71 @@ $agen = query("SELECT * FROM `agen`");
                         <?= $hmb["header"]; ?>
                     </h2>
                 <?php endforeach; ?>
-                <div class="mobil">
-                    <div class="row">
-                        <?php foreach ($mobil as $mbl): ?>
-                            <div class="col-lg-3 p-4">
-                                <img src="img/<?= $mbl["gambar"]; ?>" alt="" srcset="" class="img-fluid">
-                                <h6 class="merk">
-                                    <?= $mbl["merk"]; ?>
-                                </h6>
-                                <h4 class="jenis">
-                                    <?= $mbl["nama"]; ?>
-                                </h4>
-                                <p class="nominal">
-                                    <?= $mbl["harga"]; ?>
-                                </p><br>
-                                <?php foreach ($whatsapp as $wa): ?>
-                                <a href="<?= $wa["link"]; ?>" class="wa px-4 py-3"><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></a>
-                                <?php endforeach; ?>
-                            </div>
-                        <?php endforeach; ?>
+    
+<div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
 
-                    </div>
-                </div>
+     <div class="mobil">
+         <div class="row">
+             <?php foreach ($mobil as $mbl): ?>
+                 <div class="col-lg-3 p-4">
+                     <img src="img/<?= $mbl["gambar"]; ?>" alt="" srcset="" class="img-fluid">
+                     <h6 class="merk">
+                         <?= $mbl["merk"]; ?>
+                     </h6>
+                     <h4 class="jenis">
+                         <?= $mbl["nama"]; ?>
+                     </h4>
+                     <p class="nominal">
+                         <?= $mbl["harga"]; ?>
+                     </p><br>
+                     <?php foreach ($whatsapp as $wa): ?>
+                     <a href="<?= $wa["link"]; ?>" class="wa px-4 py-3"><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></a>
+                     <?php endforeach; ?>
+                 </div>
+             <?php endforeach; ?>
+
+         </div>
+     </div>
+</div>
                 <br>
                 <?php foreach ($headermtr as $hmtr): ?>
                     <h2>
                         <?= $hmtr["header"] ?>
                     </h2>
                 <?php endforeach; ?>
-                <div class="motor">
-                    <div class="row">
-                        <?php foreach ($motor as $mtr): ?>
-                            <div class="col-lg-3 p-3">
-                                <img src="img/<?= $mtr["gambar"]; ?>" alt="" srcset="" class="img-fluid">
-                                <h6 class="merk">
-                                    <?= $mtr["merk"]; ?>
-                                </h6>
-                                <h4 class="jenis">
-                                    <?= $mtr["nama"]; ?>
-                                </h4>
-                                <p class="nominal">
-                                    <?= $mtr["harga"]; ?>
-                                </p><br>
-                                <?php foreach ($whatsapp as $wa): ?>
-                                <a href="<?php echo $wa["link"]; ?>" class="wa px-4 py-3"><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></a>
-                                <?php endforeach; ?>
-                            </div>
-                        <?php endforeach; ?>
+    <div data-aos="fade-left"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
 
-                    </div>
-                </div>
+     <div class="motor">
+         <div class="row">
+             <?php foreach ($motor as $mtr): ?>
+                 <div class="col-lg-3 p-3">
+                     <img src="img/<?= $mtr["gambar"]; ?>" alt="" srcset="" class="img-fluid">
+                     <h6 class="merk">
+                         <?= $mtr["merk"]; ?>
+                     </h6>
+                     <h4 class="jenis">
+                         <?= $mtr["nama"]; ?>
+                     </h4>
+                     <p class="nominal">
+                         <?= $mtr["harga"]; ?>
+                     </p><br>
+                     <?php foreach ($whatsapp as $wa): ?>
+                     <a href="<?php echo $wa["link"]; ?>" class="wa px-4 py-3"><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></a>
+                     <?php endforeach; ?>
+                 </div>
+             <?php endforeach; ?>
+
+         </div>
+     </div>
+</div>
             </div>
         </div>
         <div class="container">
+            
             <div class="benefit">
                 <div class="row">
                     <div class="col-lg-6">
@@ -352,17 +405,20 @@ $agen = query("SELECT * FROM `agen`");
                             <?php endforeach; ?>
                         </div>
                         <?php foreach ($testilf as $tlf):?>
-                        <div class="content-testi">
-                            <p class="content-testi-p"><?= $tlf["teks"]; ?></p>
-                            <div class="row">
-                                <div class="col d-flex justify-content-end"><img src="img/<?= $tlf["gambar"]; ?>" alt="" srcset=""
-                                        class="img -testi img-fluid "></div>
-                                <div class="orang col">
-                                    <h6 class="nama-testi"><?= $tlf["nama"]; ?></h6>
-                                    <p class="tempat-testi"><?= $tlf["tempat"]; ?></p>
+                            <div data-aos="zoom-out-up">
+
+                                <div class="content-testi">
+                                    <p class="content-testi-p"><?= $tlf["teks"]; ?></p>
+                                    <div class="row">
+                                        <div class="col d-flex justify-content-end"><img src="img/<?= $tlf["gambar"]; ?>" alt="" srcset=""
+                                                class="img -testi img-fluid "></div>
+                                        <div class="orang col">
+                                            <h6 class="nama-testi"><?= $tlf["nama"]; ?></h6>
+                                            <p class="tempat-testi"><?= $tlf["tempat"]; ?></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <?php endforeach; ?>
                        
 
@@ -371,17 +427,20 @@ $agen = query("SELECT * FROM `agen`");
                     </div>
                     <div class="col-lg-6">
                         <?php foreach ($testirg as $trg):?>
-                        <div class="content-testi">
-                            <p class="content-testi-p"><?= $trg["teks"]; ?></p>
-                            <div class="row">
-                                <div class="col d-flex justify-content-end"><img src="img/<?= $trg["gambar"]; ?>" alt="" srcset=""
-                                        class="img -testi img-fluid "></div>
-                                <div class="orang col">
-                                    <h6 class="nama-testi"><?= $trg["nama"]; ?></h6>
-                                    <p class="tempat-testi"><?= $trg["tempat"]; ?></p>
+                            <div data-aos="zoom-out-up">
+
+                                <div class="content-testi">
+                                    <p class="content-testi-p"><?= $trg["teks"]; ?></p>
+                                    <div class="row">
+                                        <div class="col d-flex justify-content-end"><img src="img/<?= $trg["gambar"]; ?>" alt="" srcset=""
+                                                class="img -testi img-fluid "></div>
+                                        <div class="orang col">
+                                            <h6 class="nama-testi"><?= $trg["nama"]; ?></h6>
+                                            <p class="tempat-testi"><?= $trg["tempat"]; ?></p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         <?php endforeach; ?>
                         <div class="note">
                             <?php foreach ($headerts as $hdrts): ?>
@@ -400,14 +459,16 @@ $agen = query("SELECT * FROM `agen`");
                     <div class="col-xl-4"></div>
                     <div class="col-xl-5">
                         <?php foreach ($bgfas as $bgf):?>
-                        <img src="img/<?= $bgf["gambar"] ?>" alt="" srcset="" class="img-fluid bkimg">
+                        <img src="img/<?= $bgf["gambar"] ?>" alt="" srcset="" class="img-fluid bkfas">
                         <?php endforeach; ?>
                     </div>
                 </div>
             </div>
 
             <div class="fasilitas container">
-
+            <?php foreach ($bgfas as $bgf):?>
+                        <img src="img/<?= $bgf["gambar"] ?>" alt="" srcset="" class="img-fluid pojokfas">
+                        <?php endforeach; ?>
                 <div class="content-fasilitas">
 
                     <div class="row">
@@ -447,9 +508,9 @@ $agen = query("SELECT * FROM `agen`");
             </div>
         </div>
         <footer>
-            <div class="foot-img">
+            <div class="foot-icon">
                 <?php foreach ($footer as $fo):?>
-                <img class="circle-img" src="img/<?= $fo["gambar"]; ?>" alt="" srcset="">
+                <p><i class="<?= $fo["icon"]; ?>"></i></p>
             </div>
             <div class="foot container p-5">
                 <h1><?= $fo["header"]; ?></h1>
@@ -468,6 +529,14 @@ $agen = query("SELECT * FROM `agen`");
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/0d2b3238f9.js" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+        <script>
+        AOS.init();
+        </script>
+
+
 </body>
 
 </html>

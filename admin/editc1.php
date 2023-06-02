@@ -11,8 +11,8 @@ require 'functions.php';
 $id = $_GET["id"];
 $result = query("SELECT * FROM `content1` WHERE `id`= $id");
 
-if (isset($_POST["sbmc1"])){
-    if(editc1($_POST)){
+if (isset($_POST["sbmc1"])) {
+    if (editc1($_POST)) {
         echo "<script>
         alert('data berhasil diedit');
         document.location.href = 'content1.php';
@@ -45,7 +45,11 @@ if (isset($_POST["sbmc1"])){
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="vanilla-icon-picker-main/www/icon-picker.css">
+    <!-- Icon picker themes -->
+    <link rel="stylesheet" href="vanilla-icon-picker-main/dist/themes/default.min.css">
+    <link rel="stylesheet" href="vanilla-icon-picker-main/dist/themes/bootstrap-5.min.css">
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 
@@ -112,11 +116,11 @@ if (isset($_POST["sbmc1"])){
                     <i class="fas fa-fw fa-car"></i>
                     <span>Kendaraan</span>
                 </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                    data-parent="#accordionSidebar">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom:</h6>
-                        <a class="collapse-item" href="kendaraan.php"><i class="fas fa-hat-cowboy-side"></i> Header Utama</a>
+                        <a class="collapse-item" href="kendaraan.php"><i class="fas fa-hat-cowboy-side"></i> Header
+                            Utama</a>
                         <a class="collapse-item" href="mobil.php"><i class="fas fa-car-alt"></i> Mobil</a>
                         <a class="collapse-item" href="motor.php"><i class="fas fa-motorcycle"></i> Motor</a>
                     </div>
@@ -225,16 +229,24 @@ if (isset($_POST["sbmc1"])){
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <h3>Input Content-1/Masalah</h3>
+                    <h3>Edit Content-1/Masalah</h3>
                     <form action="" method="post" enctype="multipart/form-data">
-                        <?php foreach ($result as $rs):?>
-                        <input type="hidden" name="id" id="" value="<?= $rs["id"]; ?>">
                         <div class="form-group">
-                            Icon <br>
-                            <i class="<?= $rs["icon"] ;?>"></i> 
-                            <input type="file" name="icon" id="" class="form-control-file"><br>
+                            <?php foreach ($result as $rs): ?>
+                            <div class="row">
+                                <div class="col-12 col-md-6">                                  
+                                    <div class="form-group">
+                                        <label for="icon-picker" class="form-label">Choose icon</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text" id="basic-addon1"></span>
+                                            <input type="text" id="icon-picker" class="form-control" name="icon" value="<?= $rs["icon"]; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                             Teks
-                            <input type="text" name="teks" id="" class="form-control" value="<?php echo $rs["teks"] ?>"><br>
+                            <input type="hidden" name="id" id="" value="<?= $rs["id"]; ?>">
+                            <input type="text" name="teks" id="" class="form-control" required value="<?= $rs["teks"]; ?>"><br>
                             <?php endforeach; ?>
                             <button type="submit" name="sbmc1" class="btn btn-primary">Submit</button>
                         </div>
@@ -304,6 +316,8 @@ if (isset($_POST["sbmc1"])){
         <script src="js/demo/chart-area-demo.js"></script>
         <script src="js/demo/chart-pie-demo.js"></script>
 
+        <script src="vanilla-icon-picker-main/dist/icon-picker.min.js"></script>
+        <script src="vanilla-icon-picker-main/www/index.js"></script>
 </body>
 
 </html>

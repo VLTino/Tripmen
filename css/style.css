@@ -95,12 +95,36 @@
     padding-bottom: 15px;
     padding-left: 25px;
     padding-right: 25px;
+    position: relative;
+    transition: all .35s;
 }
 
-#wahdr:hover {
-    color: rgb(25,80,224);
-    background-color: white;
-}
+  
+  #wahdr span{
+    position: relative;
+    z-index: 2;
+  }
+  
+  #wahdr:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+    transition: all .35s;
+  }
+  
+  #wahdr:hover{
+    color: rgb(25,80,224) ;
+  }
+  
+  #wahdr:hover:after{
+    width: 100%;
+  }
+
 
 .content {
     overflow: hidden;

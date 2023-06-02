@@ -222,9 +222,11 @@ function backToTop() {
                             <?php echo $hdr["teks"] ?>
                         </p><br>
                         <?php foreach ($whatsapp as $wa):?>
-                        <a href="<?php echo $wa["link"] ?>" id="wahdr"><i class="fa-brands fa-whatsapp"></i>
-                            <?php echo $wa["hf"] ?>
+                            <div class="wrapper">
+                        <a href="<?php echo $wa["link"] ?>" id="wahdr"><span><i class="fa-brands fa-whatsapp"></i>
+                            <?php echo $wa["hf"] ?></span>
                         </a>
+                        </div>
                         <?php endforeach; ?>
                     <?php endforeach; ?>
                 </div>

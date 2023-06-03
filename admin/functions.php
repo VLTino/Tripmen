@@ -837,4 +837,25 @@ function editsosmed($data)
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+function ulas($data)
+{
+    global $conn;
+
+    $gambar = $data["gambar"];
+    $nama = htmlspecialchars($data["nama"]);
+    $kota = htmlspecialchars($data["kota"]);
+    $teks = htmlspecialchars($data["teks"]);
+    $rating = htmlspecialchars($data["rating"]);
+
+    $gambar = imgedit();
+    if(!$gambar){
+        $gambar = "defaultpp666.jpg";
+    }
+
+    $query = "INSERT INTO `testix` VALUES (NULL,'$gambar','$nama','$kota','$teks','$rating')";
+    mysqli_query($conn,$query);
+    return mysqli_affected_rows($conn);
+
+}
 ?>

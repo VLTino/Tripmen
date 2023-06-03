@@ -1,19 +1,19 @@
 <?php 
-require 'admin/functions.php'
+require 'admin/functions.php';
 
-// if (isset($_POST["ulas"])) {
-//     if (ulas($_POST)) {
-//         echo "<script>
-//         alert('data berhasil diedit');
-//         document.location.href = 'content1.php';
-//         </script>";
-//     } else {
-//         echo "<script>
-//         alert('data gagal diedit');
-//         document.location.href = 'content1.php';
-//         </script>";
-//     }
-// }
+if (isset($_POST["ulas"])) {
+    if (ulas($_POST)) {
+        echo "<script>
+        alert('data berhasil diedit');
+        document.location.href = 'index.php';
+        </script>";
+    } else {
+        echo "<script>
+        alert('data gagal diedit');
+        document.location.href = 'index.php';
+        </script>";
+    }
+}
 
 ?>
 
@@ -49,7 +49,9 @@ require 'admin/functions.php'
                     Nama
                     <input type="text" name="nama" id="" class="form-control">
                     Kota
-                    <input type="text" name="nama" id="" class="form-control">
+                    <input type="text" name="kota" id="" class="form-control">
+                    Teks
+                    <input type="text" name="teks" id="" class="form-control">
                     
                 <div class="rating form-control">
                     <p>Rating</p>

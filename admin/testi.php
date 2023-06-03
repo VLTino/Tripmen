@@ -10,6 +10,7 @@ require 'functions.php';
 
 $header = query("SELECT * FROM `headertesti` WHERE `id` =1");
 $testi = query("SELECT * FROM `testimonial`");
+$testix = query("SELECT * FROM `testix`");
 
 if (isset($_POST["sbmhdr"])){
     if(edithts($_POST)){
@@ -230,6 +231,7 @@ if (isset($_POST["sbmhdr"])){
                 <div class="container-fluid">
 
                   <h3>Testimonial</h3>
+
                   <p>Header Testimonial</p>
                   <form action="" method="post">
                     <div class="form-group">
@@ -241,6 +243,51 @@ if (isset($_POST["sbmhdr"])){
                         <button type="submit" name="sbmhdr" class="btn btn-primary">Edit</button>
                     </div>
                   </form>
+
+                    <h3>New Testimonial</h3>
+
+                    <table class="table table-striped table-responsive-md">
+                        <thead>
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Gambar</th>
+                                <th scope="col">Teks</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Kota</th>
+                                <th scope="col">Rating</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $i=1; ?>
+                           <?php foreach ($testix as $tsx): ?>
+                                <tr>
+                                    <th scope="row"><?= $i++; ?></th>
+                                    <td><img src="../img/<?= $tsx["gambar"]; ?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%">
+                                    </td>
+                                    <td>
+                                    <?= $tsx["teks"]; ?>
+                                    </td>
+                                    <td>
+                                    <?= $tsx["nama"]; ?>
+                                    </td>
+                                    <td>
+                                    <?= $tsx["kota"]; ?>
+                                    </td>
+                                    <td><?= $tsx["rating"]; ?></td>
+                                    <td>
+                                        <button class="btn-circle btn-success btn-sm"><i
+                                                class="fas fa-pen"></i></button>
+                                        <a onclick="return confirm('Apakah kamu yakin ingin menghapus ini?')" href="deletetsx.php?id=<?= $tsx["id"];?>" class="btn-circle btn-danger btn-sm"><i
+                                                class="fas fa-trash-alt"></i></a>
+                                    </td>
+                                </tr>
+                                <?php endforeach; ?>
+                            
+                        </tbody>
+                    </table><br>
+                    
+                    <h3>Aproved Testimonial</h3>
 
                   <table class="table table-striped table-responsive-md">
                         <thead>
@@ -283,8 +330,6 @@ if (isset($_POST["sbmhdr"])){
                         </tbody>
                     </table>
                     <a href="inputts.php" class="btn btn-primary">Tambah</a>
-
-                  
                       
             </div>
             <!-- End of Main Content -->

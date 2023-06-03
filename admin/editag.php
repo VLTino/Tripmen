@@ -239,7 +239,7 @@ if (isset($_POST["agen"])) {
                             <input type="file" name="gambar" id="" class="form-control-file">
                             <p>Nama</p>
                             <input type="text" name="nama" id="" class="form-control" value="<?= $ag["nama"]; ?>" >
-                            <p>Link Whatsapp</p>
+                            <p>Nomor Whatsapp</p>
                             <input type="text" name="link" id="" class="form-control" value="<?= $ag["link"]; ?>">
                             <?php endforeach; ?>
                             <button type="submit" class="btn btn-primary" name="agen">Submit</button>

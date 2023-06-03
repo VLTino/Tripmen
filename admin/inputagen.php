@@ -233,7 +233,7 @@ if (isset($_POST["agen"])) {
                             <input type="file" name="gambar" id="" class="form-control-file">
                             <p>Nama</p>
                             <input type="text" name="nama" id="" class="form-control" >
-                            <p>Link Whatsapp</p>
+                            <p>Nomor Whatsapp</p>
                             <input type="text" name="link" id="" class="form-control" >
                             <button type="submit" class="btn btn-primary" name="agen">Submit</button>
                         </div>

@@ -247,7 +247,7 @@ if (isset($_POST["popup"])) {
                     <form action="" method="post">
                         <div class="form-group">
                             <?php foreach ($whatsapp as $wa): ?>
-                                <p>Link Whatsapp</p>
+                                <p>Nomor Whatsapp Utama</p>
                                 <input type="text" name="link" id="" class="form-control" value="<?= $wa["link"]; ?>"><br>
                                 <p>Teks href header dan footer</p>
                                 <input type="text" name="hf" id="" class="form-control" value="<?= $wa["hf"]; ?>"><br>
@@ -285,7 +285,7 @@ if (isset($_POST["popup"])) {
                                 <th scope="col">No</th>
                                 <th scope="col">Gambar</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Link Whatsapp</th>
+                                <th scope="col">Nomor Agen</th>
                                 <th scope="col">Action</th>
                             </tr>
                         </thead>

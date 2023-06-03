@@ -147,7 +147,7 @@ function backToTop() {
     <?php endforeach; ?>
     <?php foreach ($agen as $ag):?>
     <div class="agen">
-      <a href="<?= $ag["link"]; ?>">
+      <a href="https://wa.me/<?= $ag["link"]; ?>" target="_blank">
         <div class="wan m-3">
             <div class="row">
                 <div class="col-3"><img src="img/<?= $ag["gambar"]; ?>" alt="" srcset="" style="width:50px;height:50px; border-radius:50%;"></div>
@@ -224,7 +224,7 @@ function backToTop() {
                         </p><br>
                         <?php foreach ($whatsapp as $wa):?>
                             <div class="wrapper">
-                        <a href="<?php echo $wa["link"] ?>" id="wahdr"><span><i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/<?= $wa["link"]; ?>" target="_blank" id="wahdr"><span><i class="fa-brands fa-whatsapp"></i>
                             <?php echo $wa["hf"] ?></span>
                         </a>
                         </div>
@@ -328,7 +328,7 @@ function backToTop() {
                          <?= $mbl["harga"]; ?>
                      </p><br>
                      <?php foreach ($whatsapp as $wa): ?>
-                     <a href="<?= $wa["link"]; ?>" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></span></a>
+                     <a href="https://wa.me/<?= $wa["link"]; ?>?text=" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></span></a>
                      <?php endforeach; ?>
                  </div>
              <?php endforeach; ?>
@@ -361,7 +361,7 @@ function backToTop() {
                          <?= $mtr["harga"]; ?>
                      </p><br>
                      <?php foreach ($whatsapp as $wa): ?>
-                     <a href="<?php echo $wa["link"]; ?>" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></span></a>
+                     <a href="https://wa.me/<?= $wa["link"]; ?>?text=" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></span></a>
                      <?php endforeach; ?>
                  </div>
              <?php endforeach; ?>
@@ -449,6 +449,10 @@ function backToTop() {
                             <?php foreach ($headerts as $hdrts): ?>
                             <p><i class="fa-solid fa-circle-info info"></i><?= $hdrts["note"]; ?></p>
                                 <?php endforeach; ?>
+                                <div class="ulasan">
+
+                                    <button class="glow-on-hover" type="button"><a href="##">Beri Kami Ulasan</a></button>
+                                </div>
                         </div>
 
                     </div>
@@ -531,7 +535,7 @@ function backToTop() {
                 <p style="font-weight:bold;"><?= $fo["teks2"]; ?></p><br>
                 <?php endforeach; ?>
                 <?php foreach ($whatsapp as $wa):?>
-                <a href="<?= $wa["link"]; ?>" id="wafoot"><span><i class="fa-brands fa-whatsapp"></i> <?= $wa["hf"]; ?></span></a><br><br><br>
+                <a href="https://wa.me/<?= $wa["link"]; ?>" target="_blank" id="wafoot"><span><i class="fa-brands fa-whatsapp"></i> <?= $wa["hf"]; ?></span></a><br><br><br>
                 <?php endforeach; ?>
 
 

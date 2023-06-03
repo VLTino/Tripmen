@@ -451,7 +451,7 @@ function backToTop() {
                                 <?php endforeach; ?>
                                 <div class="ulasan">
 
-                                    <button class="glow-on-hover" type="button"><a href="##">Beri Kami Ulasan</a></button>
+                                    <button class="glow-on-hover" type="button"><a href="ulas.php">Beri Kami Ulasan</a></button>
                                 </div>
                         </div>
 

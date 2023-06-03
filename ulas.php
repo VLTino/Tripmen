@@ -1,3 +1,23 @@
+<?php 
+require 'admin/functions.php'
+
+if (isset($_POST["ulas"])) {
+    if (ulas($_POST)) {
+        echo "<script>
+        alert('data berhasil diedit');
+        document.location.href = 'content1.php';
+        </script>";
+    } else {
+        echo "<script>
+        alert('data gagal diedit');
+        document.location.href = 'content1.php';
+        </script>";
+    }
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -44,7 +64,7 @@
                     <input type="radio" id="star1" name="rating" value="1" />
                     <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
                 </div><br>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" name="ulas">Submit</button>
                 </div>
                
             </form>

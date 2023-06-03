@@ -8,10 +8,25 @@ if (!isset($_SESSION["login"])) {
 
 require 'functions.php';
 
+$sosmed = query("SELECT * FROM `sosmed` WHERE `id`=1");
 $footer = query("SELECT * FROM `footer` WHERE `id` =1");
 
 if (isset($_POST["sbmf"])) {
     if (editfoot($_POST)) {
+        echo "<script>
+        alert('data berhasil diedit');
+        document.location.href = 'footer.php';
+        </script>";
+    } else {
+        echo "<script>
+        alert('data gagal diedit');
+        document.location.href = 'footer.php';
+        </script>";
+    }
+}
+
+if (isset($_POST["sosmed"])) {
+    if (editsosmed($_POST)) {
         echo "<script>
         alert('data berhasil diedit');
         document.location.href = 'footer.php';
@@ -259,6 +274,23 @@ if (isset($_POST["sbmf"])) {
                             <br>
                             <?php endforeach; ?>
                             <button type="submit" name="sbmf" class="btn btn-primary">Edit</button>
+                        </div>
+                    </form>
+
+
+                    <form action="" method="post">
+                        <div class="form-group">
+                            <?php foreach ($sosmed as $sos): ?>
+                            Facebook
+                            <input type="text" name="facebook" id="" value="<?= $sos["facebook"]; ?>" class="form-control">
+                            Twitter
+                            <input type="text" name="twitter" id="" value="<?= $sos["twitter"]; ?>" class="form-control">
+                            Instagram
+                            <input type="text" name="instagram" id="" value="<?= $sos["instagram"]; ?>" class="form-control">
+                            Tiktok
+                            <input type="text" name="tiktok" id="" value="<?= $sos["tiktok"]; ?>" class="form-control">
+                            <?php endforeach; ?><br>
+                            <button type="submit" name="sosmed" class="btn btn-primary">Edit</button>                              
                         </div>
                     </form>
 

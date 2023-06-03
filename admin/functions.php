@@ -822,4 +822,18 @@ function deleteagen($id)
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }
+
+function editsosmed($data)
+{
+    global $conn;
+
+    $fb = $data ["facebook"];
+    $tw = $data ["twitter"];
+    $ig = $data ["instagram"];
+    $tk = $data ["tiktok"];
+
+    $query = "UPDATE `sosmed` SET `facebook`='$fb',`twitter`='$tw',`instagram`='$ig',`tiktok`='$tk' WHERE `id`=1";
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
+}
 ?>

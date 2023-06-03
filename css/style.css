@@ -1,5 +1,3 @@
-
-
 .header {
     overflow: hidden;
     height: 1000px;
@@ -7,57 +5,63 @@
     position: relative;
 }
 
-.back{
+.back {
     overflow: hidden;
     width: 100%;
     position: absolute;
     top: -300px;
-    
+
 }
+
 .bg {
     position: relative;
-    
+
 }
-.bkimg{
+
+.bkimg {
     width: 100%;
-    
-    
-    
+
+
+
 }
+
 @media screen and (max-width:1900px) {
-    .back{
+    .back {
         top: -150px;
     }
-    
+
 }
 
 @media screen and (max-width:1300px) {
-    .back{
+    .back {
         top: -100px;
     }
-    
+
 }
+
 @media screen and (max-width:1200px) {
-    .back{
+    .back {
         top: -90px;
     }
-    
+
 }
+
 @media screen and (max-width:1100px) {
-    .back{
+    .back {
         top: -10px;
     }
-    
+
 }
-@media screen and (max-width:991px){
-    .bkimg{
+
+@media screen and (max-width:991px) {
+    .bkimg {
         opacity: 0;
     }
-    
+
 }
 
 .content-header {
-    
+
     position: absolute;
     padding-top: 9.5%;
     margin: 0px 150px 150px 150px;
@@ -88,9 +92,9 @@
 #wahdr {
     color: white;
     text-decoration: none;
-    border: solid 1px rgb(25,80,224);
+    border: solid 1px rgb(25, 80, 224);
     border-radius: 10px;
-    background-color: rgb(25,80,224);
+    background-color: rgb(25, 80, 224);
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 25px;
@@ -99,13 +103,13 @@
     transition: all .35s;
 }
 
-  
-  #wahdr span{
+
+#wahdr span {
     position: relative;
     z-index: 2;
-  }
-  
-  #wahdr:after{
+}
+
+#wahdr:after {
     position: absolute;
     content: "";
     top: 0;
@@ -115,15 +119,15 @@
     border-radius: 10px;
     background: #ffffff;
     transition: all .35s;
-  }
-  
-  #wahdr:hover{
-    color: rgb(25,80,224) ;
-  }
-  
-  #wahdr:hover:after{
+}
+
+#wahdr:hover {
+    color: rgb(25, 80, 224);
+}
+
+#wahdr:hover:after {
     width: 100%;
-  }
+}
 
 
 .content {
@@ -131,26 +135,27 @@
     background-color: whitesmoke;
     position: absolute;
     top: 900px;
-    
+
 }
 
 @media screen and (max-width:1100px) {
-    .content{
+    .content {
         top: 800px;
     }
-    
+
 }
 
 @media screen and (max-width:500px) {
-    .content{
+    .content {
         top: 700px;
     }
-    
+
 }
-.akomo{
-    
+
+.akomo {
+
     padding: 50px;
-    
+
 }
 
 .akomo h2 {
@@ -161,11 +166,11 @@
 
 .akoicon {
     width: 100%;
-    
+
 }
 
 .akoicon p {
-   
+
     font-size: 24px;
     text-align: center;
     color: white;
@@ -173,7 +178,7 @@
 
 .akoicon p i {
     padding: 18px;
-    background-color: rgb(24,81,224);
+    background-color: rgb(24, 81, 224);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -191,30 +196,30 @@
     position: relative;
     padding: 50px;
     padding-bottom: 0;
-    
-    
-    
+
+
+
 }
 
-.iconabt{
+.iconabt {
     width: 100%;
     display: flex;
     justify-content: center;
-    
-    
+
+
 }
 
-.iconabt p{
+.iconabt p {
     font-size: 24px;
-   position: absolute;
+    position: absolute;
     text-align: center;
     color: white;
     top: 25px;
-    
+
 }
 
-.iconabt p i{
-    background-color: rgb(188,225,56);
+.iconabt p i {
+    background-color: rgb(188, 225, 56);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -225,22 +230,22 @@
     text-align: center;
     padding: 30px 15px 30px 15px;
     border-radius: 10px;
-    background-color: rgb(188,225,56);
+    background-color: rgb(188, 225, 56);
 }
 
 @media screen and (max-width:500px) {
-    .cabout{
+    .cabout {
         margin-top: 20px;
         padding: 50px 15px 50px 15px;
     }
-    
+
 }
 
 .cabout h2 {
     font-size: 50px;
 }
 
-.cabout p{
+.cabout p {
     font-size: 18px;
 }
 
@@ -249,14 +254,15 @@
     justify-content: center;
     margin: 40px;
 }
+
 .diskon {
     word-break: break-word;
     text-align: center;
     border-radius: 10px;
-   margin-top: 10px;
+    margin-top: 10px;
     height: auto;
     padding: 20px;
-    background-color: rgb(25,80,224);
+    background-color: rgb(25, 80, 224);
     color: white;
 }
 
@@ -272,7 +278,7 @@
 
 .harga {
     text-align: center;
-    padding-bottom:50px ;
+    padding-bottom: 50px;
 }
 
 .harga h2 {
@@ -302,20 +308,62 @@
 }
 
 .wa {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
     color: white;
     text-decoration: none;
-    border: solid 1px rgb(25,80,224);
+    border: solid 1px rgb(25, 80, 224);
     border-radius: 10px;
-    background-color: rgb(25,80,224);
+    background-color: rgb(25, 80, 224);
+    position: relative;
+    transition: all .35s;
+}
+
+@media screen and (max-width:990px) {
+    .wa {
+    padding-right: 15rem!important;
+    padding-left: 15rem!important;
+    }
     
+}
+
+@media screen and (max-width:800px) {
+    .wa {
+    padding-right: 8rem!important;
+    padding-left: 8rem!important;
+    }
+    
+}
+
+
+.wa span {
+    position: relative;
+    z-index: 2;
+}
+
+.wa:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+    transition: all .35s;
 }
 
 .wa:hover {
-    color: rgb(25,80,224);
-    background-color: white;
+    color: rgb(25, 80, 224);
 }
 
-    
+.wa:hover:after {
+    width: 100%;
+}
+
+
 
 .mobil {
     border-radius: 10px;
@@ -349,11 +397,12 @@
     transition-property: box-shadow;
     transition-duration: 0.5s;
     transform: scale(1.0);
-    box-shadow: 0 0 15px gray;   
+    box-shadow: 0 0 15px gray;
 
 }
 
-.content-benefit h4,.content-benefit p {
+.content-benefit h4,
+.content-benefit p {
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -402,9 +451,10 @@
     font-size: 16px;
 }
 
-.nama-testi,.tempat-testi {
+.nama-testi,
+.tempat-testi {
     margin: 0;
-    
+
 }
 
 
@@ -416,7 +466,7 @@
     font-weight: 600;
     font-size: 16px;
     padding: 30px;
-    
+
 }
 
 .fasi {
@@ -424,6 +474,7 @@
     height: 100%;
     background-color: white;
 }
+
 .fas-img {
     position: absolute;
     z-index: 1;
@@ -433,14 +484,14 @@
 
 .bkfas {
     width: 100%;
-    
+
 }
 
 @media screen and (max-width:991px) {
     .bkfas {
         opacity: 0;
     }
-    
+
 }
 
 .fasilitas {
@@ -450,7 +501,7 @@
 
 }
 
-.pojokfas{
+.pojokfas {
     position: absolute;
     right: 0px;
     top: -50px;
@@ -459,57 +510,57 @@
 }
 
 @media screen and (min-width:1201px) {
-    .pojokfas{
+    .pojokfas {
         opacity: 0;
     }
-    
+
 }
 
 @media screen and (max-width:1199px) {
-    .pojokfas{
+    .pojokfas {
         right: -100px;
         width: 200px;
     }
-    
+
 }
 
 @media screen and (max-width:990px) {
-    .pojokfas{
-        top:80px ;
-        right:-90px ;
+    .pojokfas {
+        top: 80px;
+        right: -90px;
         width: 150px;
     }
-    
+
 }
 
 @media screen and (max-width:800px) {
-    .pojokfas{
+    .pojokfas {
         width: 100px;
         top: 100px;
         right: 10px;
     }
-    
+
 }
 
 @media screen and (max-width:768px) {
-    .pojokfas{
+    .pojokfas {
         right: -50px;
     }
-    
+
 }
 
 @media screen and (max-width:520px) {
-    .pojokfas{
+    .pojokfas {
         top: 60px;
-        right:-20px ;
+        right: -20px;
         width: 70px;
     }
-    
+
 }
 
 .fas-hd {
     padding-top: 100px;
-    
+
 }
 
 .fas-hd h4 {
@@ -520,20 +571,21 @@
     padding-top: 20px;
     font-size: 16px;
     font-family: sans-serif;
-    
+
 }
 
 .fas-p ul {
     padding: 0;
 }
 
-.fas-p li{
+.fas-p li {
     padding-bottom: 10px;
 }
+
 .check {
-    color: rgb(25,80,224);
+    color: rgb(25, 80, 224);
     padding-right: 10px;
-    
+
 }
 
 .sistem {
@@ -551,6 +603,7 @@
 .sistem-p ul li {
     padding-bottom: 10px;
 }
+
 .sistem-p {
     padding-top: 20px;
     font-size: 16px;
@@ -558,7 +611,7 @@
 }
 
 .info {
-    color:rgb(25,80,224) ;
+    color: rgb(25, 80, 224);
     padding-right: 10px;
 }
 
@@ -588,25 +641,49 @@ footer {
     word-break: break-all;
     text-decoration: none;
     color: white;
-    border: solid 1px rgb(25,80,224) ;
+    border: solid 1px rgb(25, 80, 224);
     text-align: center;
-    background-color:rgb(25,80,224) ;
+    background-color: rgb(25, 80, 224);
     border-radius: 10px;
     padding: 15px 20px 15px 20px;
+    position: relative;
+    transition: all .35s;
+}
+
+
+#wafoot span {
+    position: relative;
+    z-index: 2;
+}
+
+#wafoot:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 10px;
+    background: #ffffff;
+    transition: all .35s;
+}
+
+#wafoot:hover {
+    color: rgb(25, 80, 224);
+}
+
+#wafoot:hover:after {
+    width: 100%;
 }
 
 @media screen and (max-width:400px) {
-   #wafoot {
+    #wafoot {
         font-size: 14px;
         padding: 10px;
     }
 
 }
 
-#wafoot:hover {
-    color:rgb(25,80,224) ;
-    background-color: white;
-}
 
 
 .circle-img {
@@ -615,26 +692,26 @@ footer {
     border-radius: 50%;
 }
 
-.foot-icon{
+.foot-icon {
     width: 100%;
     display: flex;
     justify-content: center;
-    
-    
-    
+
+
+
 }
 
-.foot-icon p{
+.foot-icon p {
     font-size: 24px;
-   position: absolute;
+    position: absolute;
     text-align: center;
     color: white;
     top: 25px;
     z-index: 999;
 }
 
-.foot-icon p i{
-    background-color: rgb(188,225,56);
+.foot-icon p i {
+    background-color: rgb(188, 225, 56);
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -659,10 +736,10 @@ footer {
     font-size: 25px;
     color: white;
     border-radius: 50%;
-    background-color: rgb(44,183,67);
+    background-color: rgb(44, 183, 67);
     width: 40px;
     height: 40px;
-    
+
 }
 
 .wan {
@@ -676,13 +753,13 @@ footer {
 }
 
 .hw {
-    background-color: rgb(44,183,67) ;
+    background-color: rgb(44, 183, 67);
     color: white;
     padding: 10px;
 }
 
-.hw p{
-    font-size: 10px;    
+.hw p {
+    font-size: 10px;
 }
 
 #powa p {
@@ -704,7 +781,7 @@ footer {
     .content-header {
         margin: 50px;
     }
-    
+
 }
 
 
@@ -712,7 +789,7 @@ footer {
     .fas-img {
         opacity: 0;
     }
-    
+
 }
 
 
@@ -722,15 +799,15 @@ footer {
         position: relative;
         right: -5%;
     }
-    
+
     .about {
         width: 90%;
         position: relative;
         right: -5%;
     }
 
-    
-    
+
+
 }
 
 
@@ -749,35 +826,35 @@ footer {
         font-size: 14px;
         font-weight: normal;
     }
-    
-} 
+
+}
 
 
 @media screen and (max-width: 800px) {
     #logo {
         width: 100px;
-        
+
     }
 
     #jdl {
         font-size: 45px;
-        
+
     }
 
-    .akomop{
+    .akomop {
         text-align: left;
     }
 
     .akomo h2 {
-        font-size: 32px ;
+        font-size: 32px;
         text-align: center;
     }
-    
+
     .cabout h2 {
         font-size: 40px;
     }
 
-    .about img{
+    .about img {
         top: 7%;
         left: 46%;
     }
@@ -785,11 +862,11 @@ footer {
     .fas-p {
         font-size: 14px;
     }
-    
+
     .sistem-p {
         font-size: 14px;
     }
-    
+
     #bh2 {
         font-size: 32px;
     }
@@ -808,7 +885,7 @@ footer {
     .diskon h4 {
         font-size: 18px;
     }
-    
+
     .content-benefit p {
         font-size: 14px;
     }
@@ -824,30 +901,30 @@ footer {
         margin: 20px;
     }
 
-    
+
     .akomo {
-        padding:30px;
+        padding: 30px;
     }
-    
+
     .about {
         padding: 30px;
     }
-    
-    .about img{
+
+    .about img {
         top: 3%;
         left: 42%;
     }
 
     .cabout h2 {
         font-size: 30px;
-        
+
     }
-    
-    .cabout p{
+
+    .cabout p {
         font-size: 14px;
     }
-    
-    
+
+
 
     #bh2 {
         font-size: 25px;
@@ -865,13 +942,14 @@ footer {
     .harga h1 {
         font-size: 25px;
     }
-    
+
 }
 
 * {
     box-sizing: border-box;
-    }
-    .item {
+}
+
+.item {
     width: 200px;
     height: 200px;
     margin: 50px auto;
@@ -880,14 +958,109 @@ footer {
     text-align: center;
     color: #FFF;
     font-size: 3em;
-    }
+}
 
 
-    #btn-back-to-top {
-        position: fixed;
-        bottom: 70px;
-        right: 20px;
-        border-radius: 50%;
-        display: none;
-        z-index: 999;
-      }
+#btn-back-to-top {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    border-radius: 50%;
+    display: none;
+    z-index: 999;
+}
+
+
+.wrapper{
+    display:inline-flex;
+  }
+
+  .wrapper .icon{
+    margin: 0 20px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    position: relative;
+    z-index:2;
+  }
+  .wrapper .icon span{
+    position:relative;
+    z-index:2;
+    height: 60px;
+    width: 60px;
+    display:block;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    border-radius:50%;
+    text-align:center;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon span i{
+    font-size:25px;
+    line-height:60px;
+  }
+  
+  .wrapper .icon .tooltip{
+    position:absolute;
+    top:0px;
+    background: #fff;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    color:white;
+    opacity:0;
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .wrapper .icon:hover .tooltip{
+    opacity:1;
+    pointer-events: auto;
+    top:-70px;
+  }
+
+  .wrapper .icon .tooltip:before{
+    position:absolute;
+    content:"";
+    height:15px;
+    width:15px;
+    bottom:-8px;
+    left:50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  .wrapper .icon:hover span,
+  .wrapp .icon:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+  }
+  .wrapper .icon:hover span{
+    color: #fff;
+  }
+
+  .wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip:before{
+  background:#3B5999;
+}
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip:before{
+  background:#46C1F6;
+}
+.wrapper .github:hover span,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip:before{
+  background:rgb(233,1,152);
+}
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip:before{
+  background:#333;
+}
+
+
+.wrapper .icon .sosmed{
+    color: black;
+} 

@@ -26,6 +26,7 @@ $footer = query("SELECT * FROM `footer` WHERE `id`=1");
 $whatsapp = query("SELECT * FROM `whatsapp` WHERE `id`=1");
 $popup = query("SELECT * FROM `popupwa` WHERE `id`=1");
 $agen = query("SELECT * FROM `agen`");
+$sosmed = query("SELECT * FROM `sosmed` WHERE `id`=1");
 ?>
 
 <!DOCTYPE html>
@@ -327,7 +328,7 @@ function backToTop() {
                          <?= $mbl["harga"]; ?>
                      </p><br>
                      <?php foreach ($whatsapp as $wa): ?>
-                     <a href="<?= $wa["link"]; ?>" class="wa px-4 py-3"><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></a>
+                     <a href="<?= $wa["link"]; ?>" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></span></a>
                      <?php endforeach; ?>
                  </div>
              <?php endforeach; ?>
@@ -360,7 +361,7 @@ function backToTop() {
                          <?= $mtr["harga"]; ?>
                      </p><br>
                      <?php foreach ($whatsapp as $wa): ?>
-                     <a href="<?php echo $wa["link"]; ?>" class="wa px-4 py-3"><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></a>
+                     <a href="<?php echo $wa["link"]; ?>" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></span></a>
                      <?php endforeach; ?>
                  </div>
              <?php endforeach; ?>
@@ -455,44 +456,54 @@ function backToTop() {
             </div>
         </div>
         <div class="fasi">
-            <div class="fas-img">
-                <div class="row">
-                    <div class="col-xl-3"></div>
-                    <div class="col-xl-4"></div>
-                    <div class="col-xl-5">
-                        <?php foreach ($bgfas as $bgf):?>
-                        <img src="img/<?= $bgf["gambar"] ?>" alt="" srcset="" class="img-fluid bkfas">
-                        <?php endforeach; ?>
-                    </div>
-                </div>
-            </div>
+        <div data-aos="fade-left"
+        data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
 
-            <div class="fasilitas container">
-            <?php foreach ($bgfas as $bgf):?>
-                        <img src="img/<?= $bgf["gambar"] ?>" alt="" srcset="" class="img-fluid pojokfas">
-                        <?php endforeach; ?>
-                <div class="content-fasilitas">
+     <div class="fas-img">
+         <div class="row">
+             <div class="col-xl-3"></div>
+             <div class="col-xl-4"></div>
+             <div class="col-xl-5">
+                 <?php foreach ($bgfas as $bgf):?>
+                 <img src="img/<?= $bgf["gambar"] ?>" alt="" srcset="" class="img-fluid bkfas">
+                 <?php endforeach; ?>
+             </div>
+         </div>
+     </div>
+</div>
 
-                    <div class="row">
-                        <div class="fas-hd col-lg-4">
-                            <?php foreach ($headerfas as $hfs):?>
-                            <h4><?= $hfs["header"]; ?></h4>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="fas-p col-lg-8">
-                            <ul style="list-style: none;">
-                            <?php foreach ($fasilitas as $fas): ?>
-                                <li><i class="fa-solid fa-circle-check check"></i><?= $fas["fasilitas"]; ?></li>
-                                    <?php endforeach; ?>
-                                
+<div data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
 
-                            </ul>
-                        </div>
+     <div class="fasilitas container">
+     <?php foreach ($bgfas as $bgf):?>
+                 <img src="img/<?= $bgf["gambar"] ?>" alt="" srcset="" class="img-fluid pojokfas">
+                 <?php endforeach; ?>
+         <div class="content-fasilitas">
 
-                    </div>
-                </div>
+             <div class="row">
+                 <div class="fas-hd col-lg-4">
+                     <?php foreach ($headerfas as $hfs):?>
+                     <h4><?= $hfs["header"]; ?></h4>
+                     <?php endforeach; ?>
+                 </div>
+                 <div class="fas-p col-lg-8">
+                     <ul style="list-style: none;">
+                     <?php foreach ($fasilitas as $fas): ?>
+                         <li><i class="fa-solid fa-circle-check check"></i><?= $fas["fasilitas"]; ?></li>
+                             <?php endforeach; ?>
+                         
 
-            </div>
+                     </ul>
+                 </div>
+
+             </div>
+         </div>
+
+     </div>
+</div>
         </div>
         <div class="sistem ">
             <div class="content-sistem container">
@@ -520,9 +531,33 @@ function backToTop() {
                 <p style="font-weight:bold;"><?= $fo["teks2"]; ?></p><br>
                 <?php endforeach; ?>
                 <?php foreach ($whatsapp as $wa):?>
-                <a href="<?= $wa["link"]; ?>" id="wafoot"><i class="fa-brands fa-whatsapp"></i> <?= $wa["hf"]; ?></a>
+                <a href="<?= $wa["link"]; ?>" id="wafoot"><span><i class="fa-brands fa-whatsapp"></i> <?= $wa["hf"]; ?></span></a><br><br><br>
                 <?php endforeach; ?>
+
+
+                <div class="wrapper">
+                    <?php foreach ($sosmed as $sos): ?>
+                    <div class="icon facebook">
+                      <div class="tooltip">Facebook</div>
+                      <a href="<?= $sos["facebook"]; ?>" target="_blank" rel="noopener noreferrer" class="sosmed"><span><i class="fab fa-facebook-f"></i></span></a>
+                    </div>
+                    <div class="icon twitter">
+                      <div class="tooltip">Twitter</div>
+                      <a href="<?= $sos["twitter"]; ?>" target="_blank" rel="noopener noreferrer" class="sosmed"><span><i class="fab fa-twitter"></i></span></a>
+                    </div>
+                <div class="icon github">
+                      <div class="tooltip">Instagram</div>
+                      <a href="<?= $sos["instagram"]; ?>" target="_blank" rel="noopener noreferrer" class="sosmed"><span><i class="fab fa-instagram"></i></span></a>
+                    </div>
+                <div class="icon youtube">
+                      <div class="tooltip">Tiktok</div>
+                      <a href="<?= $sos["tiktok"]; ?>" target="_blank" rel="noopener noreferrer" class="sosmed"><span><i class="fab fa-tiktok"></i></span></a>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+                    
             </div>
+
         </footer>
     </div>
 

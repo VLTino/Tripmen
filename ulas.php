@@ -1,19 +1,19 @@
 <?php 
 require 'admin/functions.php'
 
-if (isset($_POST["ulas"])) {
-    if (ulas($_POST)) {
-        echo "<script>
-        alert('data berhasil diedit');
-        document.location.href = 'content1.php';
-        </script>";
-    } else {
-        echo "<script>
-        alert('data gagal diedit');
-        document.location.href = 'content1.php';
-        </script>";
-    }
-}
+// if (isset($_POST["ulas"])) {
+//     if (ulas($_POST)) {
+//         echo "<script>
+//         alert('data berhasil diedit');
+//         document.location.href = 'content1.php';
+//         </script>";
+//     } else {
+//         echo "<script>
+//         alert('data gagal diedit');
+//         document.location.href = 'content1.php';
+//         </script>";
+//     }
+// }
 
 ?>
 

@@ -736,8 +736,9 @@ function editwa($data)
     $hf = htmlspecialchars($data["hf"]);
     $mobil = htmlspecialchars($data["mobil"]);
     $motor = htmlspecialchars($data["motor"]);
+    $teks = htmlspecialchars($data["tekswa"]);
 
-    $query = "UPDATE `whatsapp` SET `link`='$link',`hf`='$hf',`mobil`='$mobil',`motor`='$motor' WHERE `id` =1";
+    $query = "UPDATE `whatsapp` SET `link`='$link',`hf`='$hf',`mobil`='$mobil',`motor`='$motor',`tekswa`='$teks' WHERE `id` =1";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
 }

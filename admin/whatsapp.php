@@ -255,6 +255,8 @@ if (isset($_POST["popup"])) {
                                 <input type="text" name="mobil" id="" class="form-control" value="<?= $wa["mobil"]; ?>"><br>
                                 <p>Teks href Motor</p>
                                 <input type="text" name="motor" id="" class="form-control" value="<?= $wa["motor"]; ?>"><br>
+                                <p>Teks Otomatis Whatsapp </p>
+                                <input type="text" name="tekswa" id="" class="form-control" value="<?= $wa["tekswa"]; ?>"><br>
                             <?php endforeach; ?>
                             <button type="submit" name="wa" class="btn btn-primary">Edit</button>
                         </div>

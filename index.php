@@ -328,7 +328,7 @@ function backToTop() {
                          <?= $mbl["harga"]; ?>
                      </p><br>
                      <?php foreach ($whatsapp as $wa): ?>
-                     <a href="https://wa.me/<?= $wa["link"]; ?>?text=" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></span></a>
+                     <a href="https://wa.me/<?= $wa["link"]; ?>?text=<?= $wa["tekswa"]; ?> <?= $mbl["nama"] ;?>" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></span></a>
                      <?php endforeach; ?>
                  </div>
              <?php endforeach; ?>
@@ -361,7 +361,7 @@ function backToTop() {
                          <?= $mtr["harga"]; ?>
                      </p><br>
                      <?php foreach ($whatsapp as $wa): ?>
-                     <a href="https://wa.me/<?= $wa["link"]; ?>?text=" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></span></a>
+                     <a href="https://wa.me/<?= $wa["link"]; ?>?text=<?= $wa["tekswa"]; ?> <?= $mtr["nama"] ;?>" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></span></a>
                      <?php endforeach; ?>
                  </div>
              <?php endforeach; ?>

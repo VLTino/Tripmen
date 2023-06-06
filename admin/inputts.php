@@ -8,6 +8,9 @@ if (!isset($_SESSION["login"])) {
 
 require 'functions.php';
 
+$id = $_GET["id"];
+$testix = query("SELECT * FROM `testix` WHERE `id` = $id");
+
 if (isset($_POST["sbmts"])){
     if(plusts($_POST)){
         echo "<script>
@@ -229,19 +232,23 @@ if (isset($_POST["sbmts"])){
                   <h3>Tambah Testimonial</h3>
                   <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group">
+                    <?php foreach ($testix as $tsx): ?>
                         Gambar
-                        <input type="file" name="gambar" id="" class="form-control-file"><br>
+                        <input type="file" name="gambar" id="file-input" class="form-control-file"><br>
                         Teks
-                        <textarea name="teks" id="" cols="30" rows="10" class="form-control"></textarea><br>
+                        <textarea name="teks" id="" cols="30" rows="10" class="form-control"><?= $tsx["teks"]; ?></textarea><br>
                         Nama
-                        <input type="text" name="nama" id="" class="form-control"><br>
+                        <input type="text" name="nama" id="" class="form-control" value="<?= $tsx["nama"]; ?>"><br>
                         Kota Tempat Tinggal
-                        <input type="text" name="tempat" id="" class="form-control"><br>
+                        <input type="text" name="tempat" id="" class="form-control" value="<?= $tsx["kota"]; ?>"><br>
+                        Rating
+                        <input type="text" name="tempat" id="" class="form-control" value="<?= $tsx["rating"]; ?>"><br>
                         Posisi : <br>
                         <input type="radio" value="kanan" id="kanan" name="posisi" required>
                         <label for="kanan">Kanan</label><br>
                         <input type="radio" value="kiri" id="kiri" name="posisi" required>
                         <label for="kiri">Kiri</label><br>
+                        <?php endforeach; ?>
                         <button type="submit" name="sbmts" class="btn btn-primary">Submit</button>
                     </div>
                   </form>
@@ -310,6 +317,27 @@ if (isset($_POST["sbmts"])){
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
 
+
+    <script>
+  // Ambil nama file atau path file dari database (ganti 'nama_file' dengan nama field dari database Anda)
+  const namaFileDariDatabase = 'contoh_file.txt';
+
+  // Buat referensi ke elemen input type file
+  const fileInput = document.getElementById('file-input');
+
+  // Set nilai dari elemen input type file
+  fileInput.value = ''; // Bersihkan nilai (opsional)
+  fileInput.files = [new File([''], namaFileDariDatabase)]; // Set nilai dengan objek File baru
+
+  // Tambahkan event listener untuk menangani pemilihan file (opsional)
+  fileInput.addEventListener('change', handleFileSelect);
+
+  // Tangani event pemilihan file
+  function handleFileSelect(event) {
+    const fileTerpilih = event.target.files[0];
+    console.log('File terpilih:', fileTerpilih);
+  }
+</script>
 </body>
 
 </html>

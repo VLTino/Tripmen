@@ -276,8 +276,8 @@ if (isset($_POST["sbmhdr"])){
                                     </td>
                                     <td><?= $tsx["rating"]; ?></td>
                                     <td>
-                                        <button class="btn-circle btn-success btn-sm"><i
-                                                class="fas fa-pen"></i></button>
+                                        <a href="inputts.php?id=<?= $tsx["id"]; ?>" class="btn-circle btn-success btn-sm"><i
+                                                class="fas fa-pen"></i></a>
                                         <a onclick="return confirm('Apakah kamu yakin ingin menghapus ini?')" href="deletetsx.php?id=<?= $tsx["id"];?>" class="btn-circle btn-danger btn-sm"><i
                                                 class="fas fa-trash-alt"></i></a>
                                     </td>

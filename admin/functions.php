@@ -841,7 +841,7 @@ function editsosmed($data)
 function ulas($data)
 {
     global $conn;
-
+    error_reporting(0);
     $gambar = $data["gambar"];
     $nama = htmlspecialchars($data["nama"]);
     $kota = htmlspecialchars($data["kota"]);
@@ -850,12 +850,30 @@ function ulas($data)
 
     $gambar = imgedit();
     if(!$gambar){
-        $gambar = "defaultpp666.jpg";
+        $gambar = NULL;
     }
 
     $query = "INSERT INTO `testix` VALUES (NULL,'$gambar','$nama','$kota','$teks','$rating')";
     mysqli_query($conn,$query);
     return mysqli_affected_rows($conn);
 
+}
+
+function deletetsx($id)
+{
+    global $conn;
+
+    $result = mysqli_query($conn, "SELECT `gambar` FROM `testix` WHERE `id`=$id ");
+    $row = mysqli_fetch_assoc($result);
+    $gambarlama = $row['gambar'];
+
+    $old_file = "../img/$gambarlama";
+    if (file_exists($old_file)) {
+        unlink($old_file);
+    }
+
+    $query = "DELETE FROM `testix` WHERE `id`=$id";
+    mysqli_query($conn, $query);
+    return mysqli_affected_rows($conn);
 }
 ?>

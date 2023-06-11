@@ -263,7 +263,16 @@ if (isset($_POST["sbmhdr"])){
                            <?php foreach ($testix as $tsx): ?>
                                 <tr>
                                     <th scope="row"><?= $i++; ?></th>
-                                    <td><img src="../img/<?= $tsx["gambar"]; ?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%">
+                                    <td><img src="../img/<?php 
+                                    echo $tsx["gambar"];
+                                    if (!$tsx["gambar"]) {
+                                        echo "defaultpp666.jpg";
+                                    }
+                                    
+                                    
+                                    ?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%">
+
+
                                     </td>
                                     <td>
                                     <?= $tsx["teks"]; ?>

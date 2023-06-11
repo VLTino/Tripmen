@@ -538,24 +538,39 @@ function edithts($data)
     return mysqli_affected_rows($conn);
 }
 
-function plusts($data)
+function plusts($id)
 {
     global $conn;
     error_reporting(0);
-    $gambar = $data["gambar"];
-    $teks  = htmlspecialchars($data["teks"]);
-    $nama = htmlspecialchars($data["nama"]);
-    $tempat = htmlspecialchars($data["tempat"]);
-    $posisi = htmlspecialchars($data["posisi"]);
+     // Query untuk memilih data dengan ID yang ditentukan dari Tabel A
+     $selectQuery = "SELECT * FROM `testix` WHERE id = '$id'";
+     $result = $conn->query($selectQuery);
+     
+     // Periksa apakah ada data yang dipilih
+     if ($result->num_rows > 0) {
+         // Ambil baris data
+         $row = $result->fetch_assoc();
+         
+         // Ambil nilai dari setiap kolom
+         $column1Value = $row["gambar"];
+         $column2Value = $row["teks"];
+         $column3Value = $row["nama"];
+         $column4Value = $row["tempat"];
+         $column5Value = $row["rating"];
+         
+         
+         // Query untuk memasukkan data ke Tabel B
+         $insertQuery = "INSERT INTO `testimonial` VALUES (NULL, '$column1Value', '$column2Value','$column3Value','$column4Value','$column5Value',NULL)";
+         
+         // Eksekusi query INSERT
+         if ($conn->query($insertQuery) === TRUE) {
+             // Query untuk menghapus data dari Tabel A
+             $query = "DELETE FROM `testix` WHERE `id`=$id";
+             mysqli_query($conn, $query);
+             return mysqli_affected_rows($conn);
+         }
+        }
 
-    $gambar = img();
-    if(!$gambar){
-        return false;
-    }
-
-    $query = "INSERT INTO `testimonial` VALUES (NULL,'$gambar','$teks','$nama','$tempat','$posisi')";
-    mysqli_query($conn, $query);
-    return mysqli_affected_rows($conn);
 }
 
 function deletets($id)

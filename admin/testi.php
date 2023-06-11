@@ -285,8 +285,8 @@ if (isset($_POST["sbmhdr"])){
                                     </td>
                                     <td><?= $tsx["rating"]; ?></td>
                                     <td>
-                                        <a href="inputts.php?id=<?= $tsx["id"]; ?>" class="btn-circle btn-success btn-sm"><i
-                                                class="fas fa-pen"></i></a>
+                                        <a onclick="return confirm('Apakah kamu yakin ingin aproved ini?')" href="inputts.php?id=<?= $tsx["id"]; ?>" class="btn-circle btn-success btn-sm"><i
+                                                class="fas fa-check"></i></a>
                                         <a onclick="return confirm('Apakah kamu yakin ingin menghapus ini?')" href="deletetsx.php?id=<?= $tsx["id"];?>" class="btn-circle btn-danger btn-sm"><i
                                                 class="fas fa-trash-alt"></i></a>
                                     </td>
@@ -305,7 +305,8 @@ if (isset($_POST["sbmhdr"])){
                                 <th scope="col">Gambar</th>
                                 <th scope="col">Teks</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Tempat</th>
+                                <th scope="col">Kota</th>
+                                <th scope="col">Rating</th>
                                 <th scope="col">Posisi</th>
                                 <th scope="col">Action</th>
                             </tr>
@@ -315,7 +316,11 @@ if (isset($_POST["sbmhdr"])){
                            <?php foreach ($testi as $ts): ?>
                                 <tr>
                                     <th scope="row"><?= $i++; ?></th>
-                                    <td><img src="../img/<?= $ts["gambar"]; ?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%">
+                                    <td><img src="../img/<?php echo $ts["gambar"]; 
+                                    if (!$ts["gambar"]) {
+                                        echo "defaultpp666.jpg";
+                                    }
+                                    ?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%">
                                     </td>
                                     <td>
                                     <?= $ts["teks"]; ?>
@@ -325,6 +330,9 @@ if (isset($_POST["sbmhdr"])){
                                     </td>
                                     <td>
                                     <?= $ts["tempat"]; ?>
+                                    </td>
+                                    <td>
+                                    <?= $ts["rating"]; ?>
                                     </td>
                                     <td><?= $ts["posisi"]; ?></td>
                                     <td>

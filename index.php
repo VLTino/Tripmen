@@ -413,7 +413,11 @@ function backToTop() {
                                 <div class="content-testi">
                                     <p class="content-testi-p"><?= $tlf["teks"]; ?></p>
                                     <div class="row">
-                                        <div class="col d-flex justify-content-end"><img src="img/<?= $tlf["gambar"]; ?>" alt="" srcset=""
+                                        <div class="col d-flex justify-content-end"><img src="img/<?php echo $tlf["gambar"]; 
+                                        if (!$tlf["gambar"]) {
+                                            echo "defaultpp666.jpg";
+                                        }
+                                        ?>" alt="" srcset=""
                                                 class="img -testi img-fluid "></div>
                                         <div class="orang col">
                                             <h6 class="nama-testi"><?= $tlf["nama"]; ?></h6>
@@ -435,7 +439,11 @@ function backToTop() {
                                 <div class="content-testi">
                                     <p class="content-testi-p"><?= $trg["teks"]; ?></p>
                                     <div class="row">
-                                        <div class="col d-flex justify-content-end"><img src="img/<?= $trg["gambar"]; ?>" alt="" srcset=""
+                                        <div class="col d-flex justify-content-end"><img src="img/<?php echo $trg["gambar"]; 
+                                        if (!$trg["gambar"]) {
+                                            echo "defaultpp666.jpg";
+                                        }
+                                        ?>" alt="" srcset=""
                                                 class="img -testi img-fluid "></div>
                                         <div class="orang col">
                                             <h6 class="nama-testi"><?= $trg["nama"]; ?></h6>

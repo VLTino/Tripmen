@@ -555,7 +555,7 @@ function plusts($id)
          $column1Value = $row["gambar"];
          $column2Value = $row["teks"];
          $column3Value = $row["nama"];
-         $column4Value = $row["tempat"];
+         $column4Value = $row["kota"];
          $column5Value = $row["rating"];
          
          
@@ -576,7 +576,7 @@ function plusts($id)
 function deletets($id)
 {
     global $conn;
-
+    error_reporting(0);
     $result = mysqli_query($conn, "SELECT `gambar` FROM `testimonial` WHERE `id`=$id ");
     $row = mysqli_fetch_assoc($result);
     $gambarlama = $row['gambar'];
@@ -863,7 +863,7 @@ function ulas($data)
     $teks = htmlspecialchars($data["teks"]);
     $rating = htmlspecialchars($data["rating"]);
 
-    $gambar = imgedit();
+    $gambar = imgulas();
     if(!$gambar){
         $gambar = NULL;
     }
@@ -877,7 +877,7 @@ function ulas($data)
 function deletetsx($id)
 {
     global $conn;
-
+    error_reporting(0);
     $result = mysqli_query($conn, "SELECT `gambar` FROM `testix` WHERE `id`=$id ");
     $row = mysqli_fetch_assoc($result);
     $gambarlama = $row['gambar'];
@@ -890,5 +890,34 @@ function deletetsx($id)
     $query = "DELETE FROM `testix` WHERE `id`=$id";
     mysqli_query($conn, $query);
     return mysqli_affected_rows($conn);
+}
+
+
+function imgulas()
+{
+    $namafile = $_FILES['gambar']['name'];
+    $error = $_FILES['gambar']['error'];
+    $tmpname = $_FILES['gambar']['tmp_name'];
+
+    if ($error === 4) {
+        return false;
+    }
+    //cek ekstensi
+    $ekstensigambarvalid = ['jpg', 'jpeg', 'png'];
+    $ekstensigambar = explode('.', $namafile);
+    $ekstensigambar = strtolower(end($ekstensigambar));
+    if (!in_array($ekstensigambar, $ekstensigambarvalid)) {
+        echo "<script>
+            alert('yang anda upload bukan gambar')
+            </script>";
+        return false;
+    }
+    //generate namafile baru
+    $namafilebaru = uniqid();
+    $namafilebaru .= '.';
+    $namafilebaru .= $ekstensigambar;
+
+    move_uploaded_file($tmpname, 'img/' . $namafilebaru);
+    return $namafilebaru;
 }
 ?>

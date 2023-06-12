@@ -259,39 +259,35 @@ if (isset($_POST["sbmhdr"])){
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $i=1; ?>
-                           <?php foreach ($testix as $tsx): ?>
+                            <?php if (empty($testix)): ?>
                                 <tr>
-                                    <th scope="row"><?= $i++; ?></th>
-                                    <td><img src="../img/<?php 
-                                    echo $tsx["gambar"];
-                                    if (!$tsx["gambar"]) {
-                                        echo "defaultpp666.jpg";
-                                    }
-                                    
-                                    
-                                    ?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%">
-
-
-                                    </td>
-                                    <td>
-                                    <?= $tsx["teks"]; ?>
-                                    </td>
-                                    <td>
-                                    <?= $tsx["nama"]; ?>
-                                    </td>
-                                    <td>
-                                    <?= $tsx["kota"]; ?>
-                                    </td>
-                                    <td><?= $tsx["rating"]; ?></td>
-                                    <td>
-                                        <a onclick="return confirm('Apakah kamu yakin ingin aproved ini?')" href="inputts.php?id=<?= $tsx["id"]; ?>" class="btn-circle btn-success btn-sm"><i
-                                                class="fas fa-check"></i></a>
-                                        <a onclick="return confirm('Apakah kamu yakin ingin menghapus ini?')" href="deletetsx.php?id=<?= $tsx["id"];?>" class="btn-circle btn-danger btn-sm"><i
-                                                class="fas fa-trash-alt"></i></a>
-                                    </td>
+                                    <td colspan="7" style="color:red;">Belum ada data testimonial yang baru</td>
                                 </tr>
-                                <?php endforeach; ?>
+                                <?php else: ?>
+                                    <?php $i=1; ?>
+      <?php foreach ($testix as $tsx): ?>
+          <tr>
+              <th scope="row"><?= $i++; ?></th>
+             <td>
+                  <img src="../img/<?php 
+                        if (!$tsx["gambar"]) {
+                         echo "defaultpp666.jpg";
+                      }else {
+                        echo $tsx["gambar"];
+                      }
+                    ?>" alt="" srcset="" style="width:100px;height:100px;border-radius:50%">
+                </td>
+                <td><?= $tsx["teks"]; ?></td>
+                <td><?= $tsx["nama"]; ?></td>
+                <td><?= $tsx["kota"]; ?></td>
+                <td><?= $tsx["rating"]; ?></td>
+                <td>
+                    <a onclick="return confirm('Apakah kamu yakin ingin approve ini?')" href="inputts.php?id=<?= $tsx["id"]; ?>" class="btn-circle btn-success btn-sm"><i class="fas fa-check"></i></a>
+                    <a onclick="return confirm('Apakah kamu yakin ingin menghapus ini?')" href="deletetsx.php?id=<?= $tsx["id"]; ?>" class="btn-circle btn-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+    <?php endif; ?>
                             
                         </tbody>
                     </table><br>

@@ -4,12 +4,12 @@ require 'admin/functions.php';
 if (isset($_POST["ulas"])) {
     if (ulas($_POST)) {
         echo "<script>
-        alert('data berhasil diedit');
+        alert('Ulasan berhasil dikirim');
         document.location.href = 'index.php';
         </script>";
     } else {
         echo "<script>
-        alert('data gagal diedit');
+        alert('Ulasan berhasil dikirim');
         document.location.href = 'index.php';
         </script>";
     }

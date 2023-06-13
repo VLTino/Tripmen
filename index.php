@@ -412,6 +412,27 @@ function backToTop() {
 
                                 <div class="content-testi">
                                     <p class="content-testi-p"><?= $tlf["teks"]; ?></p>
+                                        <div class="d-flex justify-content-center">
+                                            <form action="">
+                                            <div class="rating" style="font-size:10px;margin-top:0;">
+                    
+                    <input type="radio" id="star5" name="rating" value="5" <?php if ($tlf["rating"] == "5") echo "checked"; ?> />
+                    <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                    <input type="radio" id="star4" name="rating" value="4" <?php if ($tlf["rating"] == "4") echo "checked"; ?> />
+                    <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                    <input type="radio" id="star3" name="rating" value="3" <?php if ($tlf["rating"] == "3") echo "checked"; ?> />
+                    <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                    <input type="radio" id="star2" name="rating" value="2" <?php if ($tlf["rating"] == "2") echo "checked"; ?> />
+                    <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                    <input type="radio" id="star1" name="rating" value="1" <?php if ($tlf["rating"] == "1") echo "checked"; ?> />
+                    <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+                </div><br>
+                                            </form>
+                                        
+                                        </div>
+
+                                    
+                                    <br>
                                     <div class="row">
                                         <div class="col d-flex justify-content-end"><img src="img/<?php echo $tlf["gambar"]; 
                                         if (!$tlf["gambar"]) {
@@ -438,6 +459,24 @@ function backToTop() {
 
                                 <div class="content-testi">
                                     <p class="content-testi-p"><?= $trg["teks"]; ?></p>
+                                    <div class="d-flex justify-content-center">
+                                            <form action="">
+                                            <div class="rating" style="font-size:10px;margin-top:0;">
+                    
+                    <input type="radio" id="star5" name="rating" value="5" <?php if ($trg["rating"] == "5") echo "checked"; ?> />
+                    <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
+                    <input type="radio" id="star4" name="rating" value="4" <?php if ($trg["rating"] == "4") echo "checked"; ?> />
+                    <label class="star" for="star4" title="Great" aria-hidden="true"></label>
+                    <input type="radio" id="star3" name="rating" value="3" <?php if ($trg["rating"] == "3") echo "checked"; ?> />
+                    <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
+                    <input type="radio" id="star2" name="rating" value="2" <?php if ($trg["rating"] == "2") echo "checked"; ?> />
+                    <label class="star" for="star2" title="Good" aria-hidden="true"></label>
+                    <input type="radio" id="star1" name="rating" value="1" <?php if ($trg["rating"] == "1") echo "checked"; ?> />
+                    <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
+                </div><br>
+                                            </form>
+                                        
+                                        </div>
                                     <div class="row">
                                         <div class="col d-flex justify-content-end"><img src="img/<?php echo $trg["gambar"]; 
                                         if (!$trg["gambar"]) {

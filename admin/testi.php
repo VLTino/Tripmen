@@ -342,7 +342,7 @@ if (isset($_POST["sbmhdr"])){
                             
                         </tbody>
                     </table>
-                    <a href="inputts.php" class="btn btn-primary">Tambah</a>
+                  
                       
             </div>
             <!-- End of Main Content -->

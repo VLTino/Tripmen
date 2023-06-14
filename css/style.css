@@ -343,8 +343,8 @@
 
 @media screen and (max-width:800px) {
     .wa {
-    padding-right: 8rem!important;
-    padding-left: 8rem!important;
+    padding-right: 15rem!important;
+    padding-left: 15rem!important;
     
     }
     
@@ -352,19 +352,17 @@
 
 @media screen and (max-width:450px) {
     .wa {
-        padding-right: 5rem!important;
-        padding-left: 5rem!important;
-        font-size: 12px;
-        
-        
-        
+        padding-right: 7.5rem!important;
+        padding-left: 7.5rem!important;   
     }
+   
     
 }
 
 .wa span {
     position: relative;
     z-index: 2;
+    white-space: nowrap;
 }
 
 .wa:after {

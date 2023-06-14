@@ -327,9 +327,15 @@ function backToTop() {
                      <p class="nominal">
                          <?= $mbl["harga"]; ?>
                      </p><br>
-                     <?php foreach ($whatsapp as $wa): ?>
-                     <a href="https://wa.me/<?= $wa["link"]; ?>?text=<?= $wa["tekswa"]; ?> <?= $mbl["nama"] ;?>" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></span></a>
-                     <?php endforeach; ?>
+                     <div class="wam">
+                        <div class="container">
+                            
+                            <?php foreach ($whatsapp as $wa): ?>
+                            <a href="https://wa.me/<?= $wa["link"]; ?>?text=<?= $wa["tekswa"]; ?> <?= $mbl["nama"] ;?>" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["mobil"];?></span></a>
+                            <?php endforeach; ?>
+                        </div>
+
+                     </div>
                  </div>
              <?php endforeach; ?>
 
@@ -360,9 +366,13 @@ function backToTop() {
                      <p class="nominal">
                          <?= $mtr["harga"]; ?>
                      </p><br>
+                     <div class="wam">
+                        <div class="container">
                      <?php foreach ($whatsapp as $wa): ?>
                      <a href="https://wa.me/<?= $wa["link"]; ?>?text=<?= $wa["tekswa"]; ?> <?= $mtr["nama"] ;?>" target="_blank" class="wa"><span><i class="fa-brands fa-whatsapp"></i> <?php echo $wa["motor"]; ?></span></a>
                      <?php endforeach; ?>
+                     </div>
+                     </div>
                  </div>
              <?php endforeach; ?>
 
@@ -414,17 +424,17 @@ function backToTop() {
                                     <p class="content-testi-p"><?= $tlf["teks"]; ?></p>
                                         <div class="d-flex justify-content-center">
                                             <form action="">
-                                            <div class="rating" style="font-size:10px;margin-top:0;">
+                                            <div class="rating2" style="font-size:10px;margin-top:0;">
                     
-                    <input type="radio" id="star5" name="rating" value="5" <?php if ($tlf["rating"] == "5") echo "checked"; ?> />
+                    <input type="radio" id="star5" name="rating" value="5" <?php if ($tlf["rating"] == "5") echo "checked"; ?> disabled />
                     <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
-                    <input type="radio" id="star4" name="rating" value="4" <?php if ($tlf["rating"] == "4") echo "checked"; ?> />
+                    <input type="radio" id="star4" name="rating" value="4" <?php if ($tlf["rating"] == "4") echo "checked"; ?> disabled />
                     <label class="star" for="star4" title="Great" aria-hidden="true"></label>
-                    <input type="radio" id="star3" name="rating" value="3" <?php if ($tlf["rating"] == "3") echo "checked"; ?> />
+                    <input type="radio" id="star3" name="rating" value="3" <?php if ($tlf["rating"] == "3") echo "checked"; ?> disabled />
                     <label class="star" for="star3" title="Very good" aria-hidden="true"></label>
-                    <input type="radio" id="star2" name="rating" value="2" <?php if ($tlf["rating"] == "2") echo "checked"; ?> />
+                    <input type="radio" id="star2" name="rating" value="2" <?php if ($tlf["rating"] == "2") echo "checked"; ?> disabled />
                     <label class="star" for="star2" title="Good" aria-hidden="true"></label>
-                    <input type="radio" id="star1" name="rating" value="1" <?php if ($tlf["rating"] == "1") echo "checked"; ?> />
+                    <input type="radio" id="star1" name="rating" value="1" <?php if ($tlf["rating"] == "1") echo "checked"; ?> disabled />
                     <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
                 </div><br>
                                             </form>
@@ -461,7 +471,7 @@ function backToTop() {
                                     <p class="content-testi-p"><?= $trg["teks"]; ?></p>
                                     <div class="d-flex justify-content-center">
                                             <form action="">
-                                            <div class="rating" style="font-size:10px;margin-top:0;">
+                                            <div class="rating2" style="font-size:10px;margin-top:0;">
                     
                     <input type="radio" id="star5" name="rating" value="5" <?php if ($trg["rating"] == "5") echo "checked"; ?> />
                     <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
@@ -572,7 +582,7 @@ function backToTop() {
             </div>
         </div>
         <footer>
-            <div class="foot-icon">
+        <div class="foot-icon">
                 <?php foreach ($footer as $fo):?>
                 <p><i class="<?= $fo["icon"]; ?>"></i></p>
             </div>

@@ -1,6 +1,8 @@
 <?php 
 require 'admin/functions.php';
 
+$bgfas = query("SELECT * FROM `bgfasilitas` WHERE `id`=1");
+
 if (isset($_POST["ulas"])) {
     if (ulas($_POST)) {
         echo "<script>
@@ -41,6 +43,9 @@ if (isset($_POST["ulas"])) {
 
     <div class="container">
         <div class="formulas">
+        <?php foreach ($bgfas as $bgf):?>
+                 <img src="img/<?= $bgf["gambar"] ?>" alt="" srcset="" class="img-fluid pojokulas">
+                 <?php endforeach; ?>
             <h3>Berikan Ulasan Kepada Kami</h3><br>
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
@@ -51,10 +56,10 @@ if (isset($_POST["ulas"])) {
                     Kota
                     <input type="text" name="kota" id="" class="form-control">
                     Teks
-                    <input type="text" name="teks" id="" class="form-control">
+                    <textarea name="teks" id="" cols="30" rows="10" class="form-control"></textarea>               
                     
-                <div class="rating form-control">
                     <p>Rating</p>
+                <div class="rating">
                     <input type="radio" id="star5" name="rating" value="5" />
                     <label class="star" for="star5" title="Awesome" aria-hidden="true"></label>
                     <input type="radio" id="star4" name="rating" value="4" />
@@ -66,7 +71,7 @@ if (isset($_POST["ulas"])) {
                     <input type="radio" id="star1" name="rating" value="1" />
                     <label class="star" for="star1" title="Bad" aria-hidden="true"></label>
                 </div><br>
-                <button type="submit" class="btn btn-primary" name="ulas">Submit</button>
+                <button type="submit" class="btn btn-primary btn-ulas" name="ulas">Submit</button>
                 </div>
                
             </form>

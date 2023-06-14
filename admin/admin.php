@@ -301,8 +301,7 @@ $visitor = query("SELECT `counts` FROM `visitor_counter`")
 
                     </div>
 
-                    <p style="color:red;">*Syarat upload gambar:</p>
-                    <p style="color:red;">Gambar 1:1 min width:500px</p>
+                  
 
 
                 </div>

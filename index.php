@@ -178,7 +178,7 @@ function backToTop() {
         popupButton.style.animation = 'rotate 1s linear infinite';
         setTimeout(() => {
             popupButton.style.animation = '';
-        }, 100);
+        }, 1000);
     });
 
     // Menutup popup saat mengklik di luar popup
